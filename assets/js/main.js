@@ -1,108 +1,73 @@
-/* BFD Holdings — main.js */
+/* =============================================================
+   main.js — navigation, scroll reveal, counters
+   ============================================================= */
+(function () {
+  'use strict';
 
-// ---- Navbar scroll behaviour ----
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 40);
-}, { passive: true });
+  // navbar background on scroll
+  const nav = document.getElementById('nav');
+  if (nav) {
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
 
-// ---- Mobile menu ----
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobile-menu');
-const mobileLinks = mobileMenu.querySelectorAll('a');
+  // mobile menu
+  const burger = document.getElementById('burger');
+  const mobile = document.getElementById('mobile-nav');
+  if (burger && mobile) {
+    const toggle = (open) => {
+      burger.classList.toggle('open', open);
+      mobile.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    };
+    burger.addEventListener('click', () => toggle(!mobile.classList.contains('open')));
+    mobile.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => toggle(false)));
+  }
 
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  mobileMenu.classList.toggle('open');
-  document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
-});
+  // scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (en.isIntersecting) {
+          const d = en.target.dataset.delay || 0;
+          setTimeout(() => en.target.classList.add('is-visible'), +d);
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.14 });
+    revealEls.forEach((el) => io.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add('is-visible'));
+  }
 
-mobileLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    mobileMenu.classList.remove('open');
-    document.body.style.overflow = '';
-  });
-});
+  // count-up numbers
+  const nums = document.querySelectorAll('[data-count]');
+  if ('IntersectionObserver' in window && nums.length) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (!en.isIntersecting) return;
+        const el = en.target;
+        const target = parseFloat(el.dataset.count);
+        const dec = +(el.dataset.dec || 0);
+        const pre = el.dataset.pre || '';
+        const suf = el.dataset.suf || '';
+        const dur = 1600; const start = performance.now();
+        const step = (now) => {
+          const p = Math.min((now - start) / dur, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = pre + (target * eased).toFixed(dec) + suf;
+          if (p < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+        io.unobserve(el);
+      });
+    }, { threshold: 0.6 });
+    nums.forEach((n) => io.observe(n));
+  }
 
-// ---- Scroll reveal ----
-const revealEls = document.querySelectorAll('.reveal');
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      const delay = entry.target.dataset.delay || 0;
-      setTimeout(() => entry.target.classList.add('visible'), Number(delay));
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
-
-revealEls.forEach(el => revealObserver.observe(el));
-
-// ---- Counter animation ----
-function animateCounter(el) {
-  const target = parseFloat(el.dataset.target);
-  const suffix = el.dataset.suffix || '';
-  const prefix = el.dataset.prefix || '';
-  const decimals = el.dataset.decimals ? parseInt(el.dataset.decimals) : 0;
-  const duration = 1800;
-  const step = 16;
-  const steps = duration / step;
-  let current = 0;
-  const increment = target / steps;
-
-  const timer = setInterval(() => {
-    current += increment;
-    if (current >= target) {
-      current = target;
-      clearInterval(timer);
-    }
-    el.textContent = prefix + current.toFixed(decimals) + suffix;
-  }, step);
-}
-
-const counterObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      animateCounter(entry.target);
-      counterObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.5 });
-
-document.querySelectorAll('[data-counter]').forEach(el => counterObserver.observe(el));
-
-// ---- Smooth active nav link ----
-const sections = document.querySelectorAll('section[id]');
-const navAs = document.querySelectorAll('.nav-links a');
-
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 120) current = s.id;
-  });
-  navAs.forEach(a => {
-    a.style.color = a.getAttribute('href') === '#' + current ? 'var(--white)' : '';
-  });
-}, { passive: true });
-
-// ---- Contact form ----
-const form = document.getElementById('contact-form');
-if (form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Sending…';
-    btn.disabled = true;
-    setTimeout(() => {
-      btn.textContent = 'Message Sent ✓';
-      btn.style.background = 'linear-gradient(135deg,#22c55e,#16a34a)';
-      form.reset();
-      setTimeout(() => {
-        btn.textContent = 'Send Message';
-        btn.style.background = '';
-        btn.disabled = false;
-      }, 3500);
-    }, 1200);
-  });
-}
+  // footer year
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+})();

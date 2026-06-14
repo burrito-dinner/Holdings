@@ -3,629 +3,255 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="BFD Holdings — Premier investment management firm delivering institutional-grade portfolio strategies and alternative asset solutions." />
-  <title>BFD Holdings | Investment Management</title>
+  <title>BFD Holdings — Private Capital Vehicle</title>
+  <meta name="description" content="BFD Holdings is a private holding company — a personal balance sheet compounding conviction across Bitcoin and frontier crypto. No outside capital. No clients." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
-
-  <!-- Favicon via SVG -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23c9a84c'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial Black,sans-serif' font-weight='900' font-size='14' fill='%230a0f1e'>BFD</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><radialGradient id='g' cx='30%25' cy='25%25'><stop offset='0' stop-color='%2338e1ff'/><stop offset='1' stop-color='%23a474ff'/></radialGradient></defs><rect width='32' height='32' rx='7' fill='%23060916'/><circle cx='16' cy='16' r='7' fill='url(%23g)'/><ellipse cx='16' cy='16' rx='13' ry='4' fill='none' stroke='%2338e1ff' stroke-width='1.3' opacity='.8'/></svg>" />
 </head>
 <body>
 
-  <!-- ==========================================
-       NAVBAR
-       ========================================== -->
-  <nav id="navbar">
-    <div class="container nav-inner">
-      <a href="#hero" class="logo">
-        <div class="logo-mark">BFD</div>
-        <div class="logo-text">
-          <span class="logo-name">BFD Holdings</span>
-          <span class="logo-sub">Investment Management</span>
-        </div>
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav" id="nav">
+    <div class="wrap nav__inner">
+      <a href="index.html" class="brand">
+        <span class="brand__mark">BFD</span>
+        <span class="brand__txt">
+          <span class="brand__name">BFD&nbsp;HOLDINGS</span>
+          <span class="brand__sub">Private Capital Vehicle</span>
+        </span>
       </a>
-
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#philosophy">Approach</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <ul class="nav__links">
+        <li><a href="#holdings">Holdings</a></li>
+        <li><a href="investments/btc.html">Bitcoin</a></li>
+        <li><a href="investments/dnet.html">DNET</a></li>
+        <li><a href="#doctrine">Doctrine</a></li>
+        <li><a href="#about">Mandate</a></li>
       </ul>
-
-      <a href="#contact" class="btn btn-gold nav-cta" style="display:inline-flex;">Get Started</a>
-
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav__right">
+        <span class="pill"><span class="dot"></span> Mandate Active</span>
+        <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
     </div>
   </nav>
 
-  <!-- Mobile menu -->
-  <div class="mobile-menu" id="mobile-menu">
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#philosophy">Approach</a>
-    <a href="#team">Team</a>
-    <a href="#contact">Contact</a>
-    <a href="#contact" class="btn btn-gold" style="margin-top:1rem;">Get Started</a>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#holdings">Holdings</a>
+    <a href="investments/btc.html">Bitcoin</a>
+    <a href="investments/dnet.html">DNET</a>
+    <a href="#doctrine">Doctrine</a>
+    <a href="#about">Mandate</a>
   </div>
 
-  <!-- ==========================================
-       HERO
-       ========================================== -->
-  <section id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <canvas class="hero__canvas" id="space"></canvas>
+    <video class="hero__video" id="hero-video" muted loop playsinline preload="none" aria-hidden="true"></video>
+    <div class="hero__veil"></div>
+    <div class="hero__floor"></div>
 
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span></span>
-          Trusted Since 2004 · AUM $4.8B+
-        </div>
-
-        <h1 class="hero-title">
-          Precision Capital<br>
-          <span class="line2">Without Compromise.</span>
-        </h1>
-
-        <p class="hero-desc">
-          BFD Holdings delivers institutional-grade investment management
-          across public equities, private credit, and alternative assets —
-          engineered for long-term, risk-adjusted outperformance.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#services" class="btn btn-gold">Explore Strategies</a>
-          <a href="#about" class="btn btn-outline">Our Story</a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="hstat">
-            <div class="hstat-num">$<span>4.8</span>B</div>
-            <div class="hstat-label">Assets Under Management</div>
-          </div>
-          <div class="hstat">
-            <div class="hstat-num"><span>22</span>%</div>
-            <div class="hstat-label">Avg. Annual Net Return</div>
-          </div>
-          <div class="hstat">
-            <div class="hstat-num"><span>350</span>+</div>
-            <div class="hstat-label">Institutional Clients</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Decorative chart SVG -->
-    <svg class="hero-visual" viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <polyline points="0,300 60,260 120,230 180,180 240,140 300,90 360,60 420,30 480,10"
-        stroke="#c9a84c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      <polygon points="0,300 60,260 120,230 180,180 240,140 300,90 360,60 420,30 480,10 480,360 0,360"
-        fill="url(#heroGrad)" opacity=".5"/>
-      <defs>
-        <linearGradient id="heroGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#c9a84c" stop-opacity=".6"/>
-          <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
-        </linearGradient>
-      </defs>
-    </svg>
-  </section>
-
-  <!-- ==========================================
-       TICKER BAR
-       ========================================== -->
-  <div class="ticker-bar">
-    <div class="ticker-track">
-      <!-- duplicated for seamless loop -->
-      <div class="ticker-item"><span class="ticker-sym">S&P 500</span> 5,842.31 <span class="ticker-up">▲ 1.24%</span></div>
-      <div class="ticker-item"><span class="ticker-sym">NASDAQ</span> 18,623.45 <span class="ticker-up">▲ 0.87%</span></div>
-      <div class="ticker-item"><span class="ticker-sym">DOW</span> 43,218.10 <span class="ticker-up">▲ 0.51%</span></div>
-      <div class="ticker-item"><span class="ticker-sym">10Y UST</span> 4.31% <span class="ticker-dn">▼ 0.03%</span></div>
-      <div class="ticker-item"><span class="ticker-sym">GOLD</span> $2,412.80 <span class="ticker-up">▲ 0.62%</span></div>
-      <div class="ticker-item"><span class="ticker-sym">WTI</span> $78.40 <span class="ticker-dn">▼ 0.14%</span></div>
-      <div class="ticker-item"><span class="ticker-sym">EUR/USD</span> 1.0872 <span class="ticker-up">▲ 0.09%</span></div>
-      <div class="ticker-item"><span class="ticker-sym">BTC</span> $67,340 <span class="ticker-up">▲ 2.18%</span></div>
-      <!-- duplicate for seamless loop -->
-      <div class="ticker-item"><span class="ticker-sym">S&P 500</span> 5,842.31 <span class="ticker-up">▲ 1.24%</span></div>
-      <div class="ticker-item"><span class="ticker-sym">NASDAQ</span> 18,623.45 <span class="ticker-up">▲ 0.87%</span></div>
-      <div class="ticker-item"><span class="ticker-sym">DOW</span> 43,218.10 <span class="ticker-up">▲ 0.51%</span></div>
-      <div class="ticker-item"><span class="ticker-sym">10Y UST</span> 4.31% <span class="ticker-dn">▼ 0.03%</span></div>
-      <div class="ticker-item"><span class="ticker-sym">GOLD</span> $2,412.80 <span class="ticker-up">▲ 0.62%</span></div>
-      <div class="ticker-item"><span class="ticker-sym">WTI</span> $78.40 <span class="ticker-dn">▼ 0.14%</span></div>
-      <div class="ticker-item"><span class="ticker-sym">EUR/USD</span> 1.0872 <span class="ticker-up">▲ 0.09%</span></div>
-      <div class="ticker-item"><span class="ticker-sym">BTC</span> $67,340 <span class="ticker-up">▲ 2.18%</span></div>
-    </div>
-  </div>
-
-  <!-- ==========================================
-       ABOUT
-       ========================================== -->
-  <section id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-visual reveal">
-          <div class="about-card">
-            <div class="about-card-header">
-              <div class="about-icon">📈</div>
-              <div>
-                <div style="font-weight:700;font-size:.95rem;">Portfolio Performance</div>
-                <div style="font-size:.8rem;color:var(--grey-400);">3-Year Rolling Returns</div>
-              </div>
-            </div>
-            <div class="chart-bars">
-              <div class="bar" style="height:45%;animation-delay:.0s"></div>
-              <div class="bar" style="height:55%;animation-delay:.1s"></div>
-              <div class="bar" style="height:50%;animation-delay:.2s"></div>
-              <div class="bar" style="height:70%;animation-delay:.3s"></div>
-              <div class="bar" style="height:65%;animation-delay:.4s"></div>
-              <div class="bar" style="height:85%;animation-delay:.5s"></div>
-              <div class="bar" style="height:80%;animation-delay:.6s"></div>
-              <div class="bar" style="height:95%;animation-delay:.7s"></div>
-              <div class="bar" style="height:100%;animation-delay:.8s"></div>
-            </div>
-            <div style="display:flex;justify-content:space-between;font-size:.75rem;color:var(--grey-400);">
-              <span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span>
-            </div>
-            <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.06);display:flex;gap:1.5rem;">
-              <div>
-                <div style="font-size:1.4rem;font-weight:800;color:var(--gold);">+22.4%</div>
-                <div style="font-size:.75rem;color:var(--grey-400);">BFD Flagship</div>
-              </div>
-              <div>
-                <div style="font-size:1.4rem;font-weight:800;">+11.2%</div>
-                <div style="font-size:.75rem;color:var(--grey-400);">Benchmark</div>
-              </div>
-            </div>
-          </div>
-          <div class="about-badge">
-            <div class="num">20+</div>
-            <div class="lbl">Years of<br>Excellence</div>
-          </div>
-        </div>
-
-        <div class="about-content">
-          <div class="reveal">
-            <span class="section-tag">About BFD Holdings</span>
-            <h2 class="section-title">Built on Conviction.<br>Proven by Results.</h2>
-            <p class="section-sub">
-              Founded in 2004, BFD Holdings has grown from a boutique asset manager into a
-              globally recognised investment firm managing over $4.8 billion across equities,
-              fixed income, private markets, and alternative strategies. We combine rigorous
-              fundamental research with disciplined risk management to deliver consistent
-              alpha for our clients.
-            </p>
-          </div>
-
-          <div class="pillars reveal" data-delay="100">
-            <div class="pillar">
-              <div class="pillar-icon">🎯</div>
-              <div>
-                <div class="pillar-title">Research-Driven</div>
-                <p>Deep fundamental analysis underpins every position we take.</p>
-              </div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon">🛡️</div>
-              <div>
-                <div class="pillar-title">Risk-First</div>
-                <p>Capital preservation is embedded in every mandate.</p>
-              </div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon">🌍</div>
-              <div>
-                <div class="pillar-title">Global Reach</div>
-                <p>Investment insight spanning 40+ markets worldwide.</p>
-              </div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon">🤝</div>
-              <div>
-                <div class="pillar-title">Aligned Interests</div>
-                <p>Our principals invest alongside every client.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================
-       STATS
-       ========================================== -->
-  <section id="stats">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item reveal">
-          <div class="stat-num">
-            $<span data-counter data-target="4.8" data-suffix="B" data-decimals="1">$4.8B</span>
-          </div>
-          <div class="stat-label">Assets Under Management</div>
-        </div>
-        <div class="stat-item reveal" data-delay="100">
-          <div class="stat-num">
-            <span data-counter data-target="22" data-suffix="%" data-decimals="0">22%</span>
-          </div>
-          <div class="stat-label">Average Annual Net Return</div>
-        </div>
-        <div class="stat-item reveal" data-delay="200">
-          <div class="stat-num">
-            <span data-counter data-target="350" data-suffix="+" data-decimals="0">350+</span>
-          </div>
-          <div class="stat-label">Institutional Clients</div>
-        </div>
-        <div class="stat-item reveal" data-delay="300">
-          <div class="stat-num">
-            <span data-counter data-target="20" data-suffix="+" data-decimals="0">20+</span>
-          </div>
-          <div class="stat-label">Years of Proven Track Record</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================
-       SERVICES
-       ========================================== -->
-  <section id="services">
-    <div class="container text-center">
-      <div class="reveal">
-        <span class="section-tag">Our Strategies</span>
-        <h2 class="section-title">Investment Solutions<br>Built for Every Mandate</h2>
-        <p class="section-sub">
-          From concentrated equity to diversified multi-asset, BFD Holdings offers
-          a full spectrum of institutional investment strategies.
-        </p>
-      </div>
-
-      <div class="services-grid">
-        <div class="service-card reveal" data-delay="0">
-          <div class="service-icon">📊</div>
-          <h3>Global Equities</h3>
-          <p>Long-only and long/short strategies focused on high-quality, competitively
-          advantaged businesses trading at compelling valuations across global markets.</p>
-          <a href="#contact" class="service-link">Learn more →</a>
-        </div>
-
-        <div class="service-card reveal" data-delay="80">
-          <div class="service-icon">🏦</div>
-          <h3>Fixed Income &amp; Credit</h3>
-          <p>Investment-grade and high-yield credit strategies targeting superior
-          risk-adjusted returns through rigorous credit selection and active duration management.</p>
-          <a href="#contact" class="service-link">Learn more →</a>
-        </div>
-
-        <div class="service-card reveal" data-delay="160">
-          <div class="service-icon">🔒</div>
-          <h3>Private Credit</h3>
-          <p>Direct lending and structured credit solutions providing attractive
-          yield premiums with strong covenant protections and downside mitigation.</p>
-          <a href="#contact" class="service-link">Learn more →</a>
-        </div>
-
-        <div class="service-card reveal" data-delay="0">
-          <div class="service-icon">🏗️</div>
-          <h3>Real Assets</h3>
-          <p>Infrastructure and real estate investments offering inflation-linked
-          cash flows, capital appreciation, and portfolio diversification benefits.</p>
-          <a href="#contact" class="service-link">Learn more →</a>
-        </div>
-
-        <div class="service-card reveal" data-delay="80">
-          <div class="service-icon">⚖️</div>
-          <h3>Multi-Asset &amp; Macro</h3>
-          <p>Flexible mandate strategies that dynamically allocate across asset classes
-          in response to evolving macroeconomic regimes and market opportunities.</p>
-          <a href="#contact" class="service-link">Learn more →</a>
-        </div>
-
-        <div class="service-card reveal" data-delay="160">
-          <div class="service-icon">🌱</div>
-          <h3>ESG &amp; Impact</h3>
-          <p>Responsible investment strategies integrating ESG factors alongside
-          financial analysis to generate sustainable, long-term value creation.</p>
-          <a href="#contact" class="service-link">Learn more →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================
-       INVESTMENT PHILOSOPHY
-       ========================================== -->
-  <section id="philosophy">
-    <div class="container text-center">
-      <div class="reveal">
-        <span class="section-tag">Investment Philosophy</span>
-        <h2 class="section-title">How We Think About<br>Capital Allocation</h2>
-        <p class="section-sub">
-          Our investment philosophy is grounded in three core principles that have guided
-          every decision at BFD Holdings since inception.
-        </p>
-      </div>
-
-      <div class="philosophy-grid">
-        <div class="phil-card reveal" data-delay="0">
-          <div class="phil-num">01</div>
-          <div class="phil-icon">🔍</div>
-          <h3>Fundamental Research</h3>
-          <p>We build investment theses from the ground up — understanding businesses,
-          industries, and competitive dynamics before a single dollar is committed.
-          Our 28-person research team conducts over 1,200 company meetings annually.</p>
-        </div>
-
-        <div class="phil-card reveal" data-delay="100">
-          <div class="phil-num">02</div>
-          <div class="phil-icon">⚙️</div>
-          <h3>Disciplined Process</h3>
-          <p>Repeatable, rigorous investment frameworks eliminate emotional decision-making.
-          Every position is stress-tested under multiple scenarios, and our risk
-          committee reviews all new mandates before capital deployment.</p>
-        </div>
-
-        <div class="phil-card reveal" data-delay="200">
-          <div class="phil-num">03</div>
-          <div class="phil-icon">🕰️</div>
-          <h3>Long-Term Perspective</h3>
-          <p>We are patient capital. Our average holding period exceeds five years,
-          allowing us to capture the full compounding power of great businesses
-          while avoiding the friction costs of excessive turnover.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================
-       TEAM
-       ========================================== -->
-  <section id="team">
-    <div class="container text-center">
-      <div class="reveal">
-        <span class="section-tag">Leadership Team</span>
-        <h2 class="section-title">Experienced Minds,<br>Aligned Interests</h2>
-        <p class="section-sub">
-          Our senior team brings decades of combined experience from the world's
-          leading investment banks, hedge funds, and asset managers.
-        </p>
-      </div>
-
-      <div class="team-grid">
-        <div class="team-card reveal" data-delay="0">
-          <div class="team-avatar" style="background:linear-gradient(135deg,#1e3a5f 0%,#0d2240 100%);">
-            <span style="position:relative;z-index:1;color:var(--gold);">JB</span>
-          </div>
-          <div class="team-body">
-            <div class="team-name">James Beaumont</div>
-            <div class="team-role">Founder &amp; Chief Executive Officer</div>
-            <p class="team-bio">30 years in global asset management. Former MD at Goldman Sachs Asset Management. MSc Finance, London School of Economics.</p>
-          </div>
-        </div>
-
-        <div class="team-card reveal" data-delay="80">
-          <div class="team-avatar" style="background:linear-gradient(135deg,#3b1f5e 0%,#1e0d40 100%);">
-            <span style="position:relative;z-index:1;color:var(--gold);">FD</span>
-          </div>
-          <div class="team-body">
-            <div class="team-name">Fiona Drescher</div>
-            <div class="team-role">Chief Investment Officer</div>
-            <p class="team-bio">Former portfolio manager at Bridgewater Associates. CFA Charterholder. MBA, Wharton School.</p>
-          </div>
-        </div>
-
-        <div class="team-card reveal" data-delay="160">
-          <div class="team-avatar" style="background:linear-gradient(135deg,#1f3b2e 0%,#0d2018 100%);">
-            <span style="position:relative;z-index:1;color:var(--gold);">MK</span>
-          </div>
-          <div class="team-body">
-            <div class="team-name">Marcus Kim</div>
-            <div class="team-role">Head of Private Markets</div>
-            <p class="team-bio">Previously led PE credit at Apollo Global. 18 years of private markets experience across North America and Asia.</p>
-          </div>
-        </div>
-
-        <div class="team-card reveal" data-delay="240">
-          <div class="team-avatar" style="background:linear-gradient(135deg,#3b2a1f 0%,#251508 100%);">
-            <span style="position:relative;z-index:1;color:var(--gold);">SR</span>
-          </div>
-          <div class="team-body">
-            <div class="team-name">Sophie Renard</div>
-            <div class="team-role">Chief Risk Officer</div>
-            <p class="team-bio">Quantitative risk specialist. Former head of risk at AQR Capital. PhD in Financial Mathematics, ETH Zürich.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================
-       CONTACT
-       ========================================== -->
-  <section id="contact">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info">
-          <span class="section-tag">Get In Touch</span>
-          <h2>Start the Conversation</h2>
-          <div class="divider" style="margin-left:0;"></div>
-          <p style="margin-top:1rem;">
-            Whether you're a family office, endowment, pension plan, or high-net-worth
-            individual seeking institutional-quality investment management, we'd welcome
-            the opportunity to understand your objectives.
-          </p>
-
-          <div class="contact-detail">
-            <div class="contact-detail-icon">📍</div>
-            <div>
-              <div class="contact-detail-label">Head Office</div>
-              <div class="contact-detail-value">One Canada Square, Canary Wharf<br>London, E14 5AB, United Kingdom</div>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <div class="contact-detail-icon">📞</div>
-            <div>
-              <div class="contact-detail-label">Phone</div>
-              <div class="contact-detail-value">+44 20 7946 0321</div>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <div class="contact-detail-icon">✉️</div>
-            <div>
-              <div class="contact-detail-label">Email</div>
-              <div class="contact-detail-value">enquiries@bfdholdings.com</div>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <div class="contact-detail-icon">🕘</div>
-            <div>
-              <div class="contact-detail-label">Business Hours</div>
-              <div class="contact-detail-value">Monday – Friday, 8:00 AM – 6:00 PM GMT</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-form reveal">
-          <h3 style="margin-bottom:1.5rem;">Enquiry Form</h3>
-          <form id="contact-form" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="fname" placeholder="James" required />
-              </div>
-              <div class="form-group">
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lname" placeholder="Beaumont" required />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="james@firm.com" required />
-            </div>
-
-            <div class="form-group">
-              <label for="org">Organisation</label>
-              <input type="text" id="org" name="org" placeholder="Your Firm or Family Office" />
-            </div>
-
-            <div class="form-group">
-              <label for="aum">Investable Assets (AUM)</label>
-              <select id="aum" name="aum">
-                <option value="" disabled selected>Select range</option>
-                <option>$1M – $10M</option>
-                <option>$10M – $50M</option>
-                <option>$50M – $250M</option>
-                <option>$250M – $1B</option>
-                <option>$1B+</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="interest">Primary Interest</label>
-              <select id="interest" name="interest">
-                <option value="" disabled selected>Select strategy</option>
-                <option>Global Equities</option>
-                <option>Fixed Income &amp; Credit</option>
-                <option>Private Credit</option>
-                <option>Real Assets</option>
-                <option>Multi-Asset &amp; Macro</option>
-                <option>ESG &amp; Impact</option>
-                <option>Multi-Strategy / Bespoke</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Tell us about your investment objectives and any specific requirements…"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-gold btn-full">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================
-       FOOTER
-       ========================================== -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#hero" class="logo">
-            <div class="logo-mark">BFD</div>
-            <div class="logo-text">
-              <span class="logo-name">BFD Holdings</span>
-              <span class="logo-sub">Investment Management</span>
-            </div>
-          </a>
-          <p>Delivering institutional-grade investment management since 2004. Regulated by the Financial Conduct Authority.</p>
-          <div style="margin-top:1.5rem;font-size:.78rem;color:var(--grey-600);">FCA Reference No. 483621</div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Strategies</h4>
-          <ul>
-            <li><a href="#services">Global Equities</a></li>
-            <li><a href="#services">Fixed Income &amp; Credit</a></li>
-            <li><a href="#services">Private Credit</a></li>
-            <li><a href="#services">Real Assets</a></li>
-            <li><a href="#services">Multi-Asset &amp; Macro</a></li>
-            <li><a href="#services">ESG &amp; Impact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#philosophy">Investment Philosophy</a></li>
-            <li><a href="#team">Leadership Team</a></li>
-            <li><a href="#contact">Careers</a></li>
-            <li><a href="#contact">Press &amp; Media</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="#contact">Privacy Policy</a></li>
-            <li><a href="#contact">Terms of Use</a></li>
-            <li><a href="#contact">Regulatory Disclosures</a></li>
-            <li><a href="#contact">Cookie Policy</a></li>
-            <li><a href="#contact">Complaints Procedure</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2024 BFD Holdings Limited. All rights reserved.</p>
-        <div style="display:flex;gap:1.5rem;">
-          <a href="#contact">LinkedIn</a>
-          <a href="#contact">Bloomberg</a>
-          <a href="#contact">Regulatory Filings</a>
-        </div>
-      </div>
-
-      <p class="disclaimer">
-        BFD Holdings Limited is authorised and regulated by the Financial Conduct Authority (FCA).
-        Past performance is not a reliable indicator of future results. The value of investments
-        and the income from them can fall as well as rise and investors may get back less than
-        they invest. This website is for informational purposes only and does not constitute
-        financial advice or an offer to buy or sell any investment product.
+    <div class="wrap hero__inner">
+      <span class="eyebrow hero__eyebrow">Est. on conviction · No outside capital</span>
+      <h1 class="hero__title">
+        Compounding<br>
+        conviction across<br>
+        the <span class="grad">digital frontier.</span>
+      </h1>
+      <p class="hero__sub">
+        BFD Holdings is a <strong>private holding company</strong> — a single operator's
+        balance sheet, run with institutional discipline. Not a fund. Not a family office.
+        No clients, no mandates but our own. A vehicle built to hold rare assets through
+        cycles: <strong>Bitcoin</strong> and <strong>DNET</strong>.
       </p>
+      <div class="hero__actions">
+        <a href="#holdings" class="btn btn--primary btn--lg">View Holdings</a>
+        <a href="#doctrine" class="btn btn--ghost btn--lg">The Doctrine</a>
+      </div>
+
+      <div class="hero__ledger">
+        <div class="ledger__item"><div class="k">Capital Structure</div><div class="v">100% <small>Self-funded</small></div></div>
+        <div class="ledger__item"><div class="k">Core Positions</div><div class="v">2 <small>BTC · DNET</small></div></div>
+        <div class="ledger__item"><div class="k">Time Horizon</div><div class="v">Multi-cycle</div></div>
+        <div class="ledger__item"><div class="k">Outside LPs</div><div class="v">Zero</div></div>
+      </div>
+    </div>
+
+    <div class="hero__scroll"><span>Scroll</span><span class="bar"></span></div>
+  </header>
+
+  <!-- ===================== HOLDINGS ===================== -->
+  <section class="section" id="holdings">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="eyebrow">The Portfolio</span>
+        <h2 class="section__title">Two positions. Total conviction.</h2>
+        <p class="section__sub">
+          A deliberately concentrated book. Each holding carries its own living thesis —
+          the public summary is open; the full thesis and allocation are reserved.
+        </p>
+      </div>
+
+      <div class="holdings__grid">
+        <!-- BTC -->
+        <a href="investments/btc.html" class="holding-card holding-card--btc reveal">
+          <div class="holding-card__top">
+            <span class="holding-card__sym">₿</span>
+            <span class="holding-card__tag">Digital Reserve Asset</span>
+          </div>
+          <h3 class="holding-card__name">Bitcoin</h3>
+          <div class="holding-card__ticker">BTC</div>
+          <p class="holding-card__teaser">
+            The base-layer reserve. Scarce, sovereign, and apolitical — held as the
+            foundation of the book and the benchmark every other risk is measured against.
+          </p>
+          <div class="holding-card__foot">
+            <span class="holding-card__locked">🔒 Thesis &amp; allocation</span>
+            <span class="holding-card__go">Open dossier →</span>
+          </div>
+        </a>
+
+        <!-- DNET -->
+        <a href="investments/dnet.html" class="holding-card holding-card--dnet reveal" data-delay="120">
+          <div class="holding-card__top">
+            <span class="holding-card__sym">◈</span>
+            <span class="holding-card__tag">Frontier Crypto</span>
+          </div>
+          <h3 class="holding-card__name">DNET</h3>
+          <div class="holding-card__ticker">DNET</div>
+          <p class="holding-card__teaser">
+            The asymmetric bet — a frontier crypto position sized for convexity. Higher
+            variance, higher conviction, with a thesis that updates as the network matures.
+          </p>
+          <div class="holding-card__foot">
+            <span class="holding-card__locked">🔒 Thesis &amp; allocation</span>
+            <span class="holding-card__go">Open dossier →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATS ===================== -->
+  <section class="section stats">
+    <div class="wrap">
+      <div class="stats__grid">
+        <div class="stat reveal"><div class="stat__num"><span data-count="100" data-suf="%">100%</span></div><div class="stat__label">Owner-funded</div></div>
+        <div class="stat reveal" data-delay="80"><div class="stat__num"><span data-count="0">0</span></div><div class="stat__label">External investors</div></div>
+        <div class="stat reveal" data-delay="160"><div class="stat__num"><span data-count="2">2</span></div><div class="stat__label">Conviction positions</div></div>
+        <div class="stat reveal" data-delay="240"><div class="stat__num">∞</div><div class="stat__label">Holding period</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DOCTRINE ===================== -->
+  <section class="section" id="doctrine">
+    <div class="wrap">
+      <div class="section__head center reveal">
+        <span class="eyebrow">Operating Doctrine</span>
+        <h2 class="section__title">How this balance sheet is run</h2>
+        <p class="section__sub">Four principles. No committee, no consensus to dilute them.</p>
+      </div>
+
+      <div class="doctrine__grid">
+        <div class="principle reveal">
+          <div class="principle__no">01</div>
+          <div class="principle__icon">🛰️</div>
+          <h3 class="principle__title">Sovereignty</h3>
+          <p>Self-custodied, self-funded, self-directed. No outside capital means no outside pressure — decisions answer to conviction alone.</p>
+        </div>
+        <div class="principle reveal" data-delay="80">
+          <div class="principle__no">02</div>
+          <div class="principle__icon">🎯</div>
+          <h3 class="principle__title">Concentration</h3>
+          <p>Diversification is a hedge against ignorance. A small number of deeply understood positions, sized with intent.</p>
+        </div>
+        <div class="principle reveal" data-delay="160">
+          <div class="principle__no">03</div>
+          <div class="principle__icon">⏳</div>
+          <h3 class="principle__title">Long Horizon</h3>
+          <p>Measured in cycles, not quarters. Volatility is the toll paid for asymmetric returns, not a reason to flinch.</p>
+        </div>
+        <div class="principle reveal" data-delay="240">
+          <div class="principle__no">04</div>
+          <div class="principle__icon">📐</div>
+          <h3 class="principle__title">Asymmetry</h3>
+          <p>Risk what is knowable; chase what is convex. Capped downside, uncapped upside — every position must earn its place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MANDATE / ABOUT ===================== -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="cta">
+        <div class="cta__card reveal">
+          <span class="eyebrow" style="justify-content:center;">The Mandate</span>
+          <h2 class="cta__title">Not a fund. Not a family office.<br>A personal vehicle.</h2>
+          <p>
+            BFD Holdings exists to compound one person's conviction over a very long
+            horizon. It does not solicit, accept, or manage outside capital. There are no
+            clients to serve and no redemptions to fear — only positions to understand and
+            time to let them work. The dossiers below are a private research journal, kept
+            public-facing for the record.
+          </p>
+          <div class="hero__actions" style="justify-content:center;">
+            <a href="investments/btc.html" class="btn btn--btc">₿ Bitcoin Dossier</a>
+            <a href="investments/dnet.html" class="btn btn--primary">◈ DNET Dossier</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html" class="brand">
+            <span class="brand__mark">BFD</span>
+            <span class="brand__txt">
+              <span class="brand__name">BFD&nbsp;HOLDINGS</span>
+              <span class="brand__sub">Private Capital Vehicle</span>
+            </span>
+          </a>
+          <p>A private holding company. Self-funded, self-custodied, self-directed — compounding conviction across the digital frontier.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Holdings</h4>
+          <ul>
+            <li><a href="investments/btc.html">Bitcoin (BTC)</a></li>
+            <li><a href="investments/dnet.html">DNET</a></li>
+            <li><a href="#doctrine">Operating Doctrine</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>The Vehicle</h4>
+          <ul>
+            <li><a href="#about">The Mandate</a></li>
+            <li><a href="#holdings">Portfolio</a></li>
+            <li><a href="#" data-unlock>Member Access</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__disclaimer">
+        BFD Holdings is a private investment vehicle holding the personal assets of its owner.
+        Nothing on this site is an offer to sell or a solicitation to buy any security or asset,
+        investment advice, or a recommendation. No outside capital is accepted or managed.
+        Crypto-assets are highly volatile and may lose all value.
+      </p>
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> BFD Holdings · All rights reserved</p>
+        <p class="footer__lock unlock-show" data-lock>🔓 Sign out of member access</p>
+      </div>
     </div>
   </footer>
 
+  <script src="assets/js/space.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/paywall.js"></script>
 </body>
 </html>
