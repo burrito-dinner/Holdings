@@ -24,18 +24,18 @@
   }
 
   function buildStars() {
-    const count = Math.round((W * H) / 5200);
+    const count = Math.round((W * H) / 9000);   // sparser, calmer
     stars = [];
-    const palette = ['#ffffff', '#bfe6ff', '#cdbcff', '#fff3d6'];
+    const palette = ['#ece9e1', '#fff6e2', '#e7ddc6', '#d8d4c8'];  // warm whites
     for (let i = 0; i < count; i++) {
       stars.push({
         x: Math.random() * W,
         y: Math.random() * H,
         z: Math.random(),                       // depth → parallax + size
-        r: Math.random() * 1.3 + 0.2,
+        r: Math.random() * 1.1 + 0.18,
         c: palette[(Math.random() * palette.length) | 0],
         ph: Math.random() * Math.PI * 2,
-        tw: 0.4 + Math.random() * 1.6           // twinkle speed
+        tw: 0.3 + Math.random() * 1.0           // slower twinkle
       });
     }
   }
@@ -56,16 +56,16 @@
       const tw = 0.55 + 0.45 * Math.sin(t * s.tw + s.ph);
       const px = (pointer.x * (s.z * 14));
       const py = (pointer.y * (s.z * 14));
-      ctx.globalAlpha = (0.25 + s.z * 0.75) * tw;
+      ctx.globalAlpha = (0.18 + s.z * 0.62) * tw;
       ctx.fillStyle = s.c;
       ctx.beginPath();
       ctx.arc(s.x + px, s.y + py, s.r * (0.6 + s.z), 0, Math.PI * 2);
       ctx.fill();
-      // glow on the brightest
-      if (s.z > 0.86) {
-        ctx.globalAlpha = 0.12 * tw;
+      // faint halo on the brightest only
+      if (s.z > 0.92) {
+        ctx.globalAlpha = 0.06 * tw;
         ctx.beginPath();
-        ctx.arc(s.x + px, s.y + py, s.r * 4, 0, Math.PI * 2);
+        ctx.arc(s.x + px, s.y + py, s.r * 3, 0, Math.PI * 2);
         ctx.fill();
       }
     }
@@ -75,7 +75,7 @@
   /* ---------- shooting stars ---------- */
   function maybeShoot() {
     if (reduced) return;
-    if (Math.random() < 0.006 && shooting.length < 2) {
+    if (Math.random() < 0.0022 && shooting.length < 1) {
       const fromLeft = Math.random() > 0.5;
       shooting.push({
         x: fromLeft ? -50 : W + 50,

@@ -7,9 +7,9 @@
   <meta name="description" content="BFD Holdings dossier on Bitcoin (BTC). Public summary open; full thesis and allocation reserved for members." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23060916'/><text x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-size='18' fill='%23f7931a'>₿</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0a0c'/><text x='50%25' y='57%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='18' fill='%23d9a441'>₿</text></svg>" />
 </head>
 <body>
 
@@ -17,9 +17,9 @@
   <nav class="nav" id="nav">
     <div class="wrap nav__inner">
       <a href="../index.html" class="brand">
-        <span class="brand__mark">BFD</span>
+        <span class="brand__mark"><svg viewBox="0 0 34 26" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="17" cy="13" r="6.5"/><ellipse cx="17" cy="13" rx="15.5" ry="5" transform="rotate(-16 17 13)"/></svg></span>
         <span class="brand__txt">
-          <span class="brand__name">BFD&nbsp;HOLDINGS</span>
+          <span class="brand__name">BFD Holdings</span>
           <span class="brand__sub">Private Capital Vehicle</span>
         </span>
       </a>
@@ -28,10 +28,10 @@
         <li><a href="btc.html" class="active">Bitcoin</a></li>
         <li><a href="dnet.html">DNET</a></li>
         <li><a href="../index.html#doctrine">Doctrine</a></li>
-        <li><a href="../index.html#about">Mandate</a></li>
+        <li><a href="../index.html#mandate">Mandate</a></li>
       </ul>
       <div class="nav__right">
-        <span class="pill"><span class="dot"></span> Mandate Active</span>
+        <span class="tag"><span class="dot"></span> Mandate Active</span>
         <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -41,22 +41,17 @@
     <a href="btc.html">Bitcoin</a>
     <a href="dnet.html">DNET</a>
     <a href="../index.html#doctrine">Doctrine</a>
-    <a href="../index.html#about">Mandate</a>
+    <a href="../index.html#mandate">Mandate</a>
   </div>
 
   <!-- ===================== ASSET HERO ===================== -->
   <header class="asset-hero asset-hero--btc">
     <div class="wrap">
-      <div class="asset-crumb"><a href="../index.html">Holdings</a> / Bitcoin</div>
+      <div class="asset-crumb"><a href="../index.html">Holdings</a> &nbsp;/&nbsp; Bitcoin</div>
       <div class="asset-hero__row">
-        <span class="asset-emblem">₿</span>
+        <span class="asset-emblem"><span class="glyph">₿</span></span>
         <div>
           <h1 class="asset-hero__title">Bitcoin <span class="tkr">BTC</span></h1>
-          <div class="asset-tags">
-            <span class="pill">Digital Reserve Asset</span>
-            <span class="pill">Core Holding</span>
-            <span class="pill">Self-custodied</span>
-          </div>
         </div>
       </div>
       <p class="asset-hero__teaser">
@@ -64,8 +59,12 @@
         the hardest, most liquid, most credibly neutral money yet engineered — and the
         benchmark against which every other position must justify its risk.
       </p>
+      <div class="asset-tags">
+        <span class="tag">Digital Reserve Asset</span>
+        <span class="tag">Core Holding</span>
+        <span class="tag">Self-custodied</span>
+      </div>
 
-      <!-- PUBLIC facts (open) -->
       <div class="asset-facts">
         <div class="fact"><div class="fact__k">Asset Class</div><div class="fact__v">Crypto · L1</div></div>
         <div class="fact"><div class="fact__k">Role in Book</div><div class="fact__v">Reserve</div></div>
@@ -81,36 +80,37 @@
       <div class="section__head reveal">
         <span class="eyebrow">Members Dossier</span>
         <h2 class="section__title">Full thesis &amp; allocation</h2>
-        <p class="section__sub">The complete write-up — including portfolio weight, entry context, and risk framing — is reserved. Unlock to read the living thesis.</p>
+        <p class="section__sub">The complete write-up — portfolio weight, entry context, and risk framing — is reserved. Unlock to read the living thesis.</p>
       </div>
 
-      <!-- premium block: blurred until unlocked -->
       <div class="premium reveal">
         <div class="premium__inner">
           <!-- ===========================================================
                EDIT YOUR BITCOIN THESIS BELOW. Plain HTML — update freely.
                =========================================================== -->
           <div class="prose">
-            <div class="alloc-bar" style="--accent: var(--btc);">
-              <div class="alloc-bar__track"><div class="alloc-bar__fill" style="width:65%"></div></div>
-              <div class="alloc-bar__row"><span>Portfolio allocation</span><span><b>65%</b> of book</span></div>
+            <div class="alloc" style="--accent: var(--btc);">
+              <div class="alloc__row">
+                <span class="alloc__label">Portfolio allocation</span>
+                <span class="alloc__val">65<small>% of book</small></span>
+              </div>
+              <div class="alloc__track"><div class="alloc__fill" style="width:65%"></div></div>
             </div>
 
-            <h3>The one-line thesis</h3>
-            <blockquote>Own the scarcest monetary asset in existence and refuse to be shaken out of it.</blockquote>
+            <blockquote>Own the scarcest monetary asset in existence, and refuse to be shaken out of it.</blockquote>
 
             <h3>Why I hold it</h3>
             <p>
               Bitcoin is the anchor of this balance sheet because it is the only asset I can
               hold with no counterparty, no issuer, and a supply schedule no one can change.
-              In a world of expanding balance sheets, a fixed 21-million-coin cap is a bet on
-              arithmetic over politics.
+              In a world of expanding balance sheets, a fixed twenty-one-million-coin cap is a
+              bet on arithmetic over politics.
             </p>
             <ul>
-              <li><b>Scarcity:</b> a hard cap enforced by code and consensus, not promises.</li>
-              <li><b>Neutrality:</b> no CEO, no foundation, no jurisdiction to capture.</li>
-              <li><b>Liquidity:</b> deep, global, 24/7 — exit is always available.</li>
-              <li><b>Sovereignty:</b> self-custodied keys; the position is mine, fully.</li>
+              <li><b>Scarcity</b> — a hard cap enforced by code and consensus, not promises.</li>
+              <li><b>Neutrality</b> — no chief executive, no foundation, no jurisdiction to capture.</li>
+              <li><b>Liquidity</b> — deep, global, around the clock; exit is always available.</li>
+              <li><b>Sovereignty</b> — self-custodied keys; the position is mine, fully.</li>
             </ul>
 
             <h3>Position sizing</h3>
@@ -122,31 +122,30 @@
 
             <h3>What would change my mind</h3>
             <ul>
-              <li>A credible break in the issuance schedule or 21M cap.</li>
+              <li>A credible break in the issuance schedule or twenty-one-million cap.</li>
               <li>Sustained, structural loss of hashrate decentralisation.</li>
               <li>A superior, more credibly neutral settlement layer at scale.</li>
             </ul>
 
             <h3>Risk framing</h3>
             <p>
-              Drawdowns of 70%+ are part of the contract, not a surprise. The position is
-              sized so that a brutal cycle never forces a sale. Time in the asset, not timing
-              of the asset, is the edge.
+              Drawdowns of seventy percent or more are part of the contract, not a surprise.
+              The position is sized so that a brutal cycle never forces a sale. Time in the
+              asset, not timing of the asset, is the edge.
             </p>
           </div>
           <!-- ===================== END EDITABLE THESIS ===================== -->
         </div>
 
-        <!-- paywall overlay (hidden once unlocked) -->
         <div class="paywall">
           <div class="paywall__card">
-            <div class="paywall__icon">🔒</div>
+            <div class="paywall__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="5" y="11" width="14" height="9" rx="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
             <h3 class="paywall__title">Members only</h3>
             <p class="paywall__text">The full Bitcoin thesis and exact allocation are reserved for members of BFD Holdings.</p>
             <div class="paywall__price">Access code required</div>
             <div class="paywall__actions">
-              <button class="btn btn--primary" data-unlock>Unlock dossier</button>
-              <a class="btn btn--ghost" href="mailto:access@bfdholdings.example?subject=BFD%20Holdings%20member%20access">Request access</a>
+              <button class="btn btn--solid" data-unlock>Unlock dossier</button>
+              <a class="btn" href="mailto:access@bfdholdings.example?subject=BFD%20Holdings%20member%20access">Request access</a>
             </div>
           </div>
         </div>
@@ -159,9 +158,9 @@
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="wrap">
-      <div class="footer__bottom" style="border:0;padding-top:0;">
+      <div class="footer__bottom" style="border:0; padding-top:0;">
         <p>© <span id="year">2026</span> BFD Holdings · Private holding — not investment advice</p>
-        <p class="footer__lock unlock-show" data-lock>🔓 Sign out of member access</p>
+        <p class="footer__lock unlock-show" data-lock>Sign out of member access</p>
       </div>
       <p class="footer__disclaimer">
         Personal holding of the owner of BFD Holdings. Not an offer, solicitation, or
@@ -178,11 +177,11 @@
       <h3 class="modal__title">Member access</h3>
       <p class="modal__text">Enter your access code to unlock the full thesis and allocation across every dossier.</p>
       <form id="pw-form">
-        <input class="modal__input" id="pw-input" type="text" placeholder="ACCESS CODE" autocomplete="off" spellcheck="false" />
+        <input class="modal__input" id="pw-input" type="text" placeholder="Access code" autocomplete="off" spellcheck="false" />
         <div class="modal__error" id="pw-error"></div>
-        <button type="submit" class="btn btn--primary" style="width:100%;">Unlock</button>
+        <button type="submit" class="btn btn--solid" style="width:100%;">Unlock</button>
       </form>
-      <p class="modal__hint">Don't have a code? <a href="mailto:access@bfdholdings.example" style="color:var(--cyan)">Request access →</a></p>
+      <p class="modal__hint">Don't have a code? <a href="mailto:access@bfdholdings.example">Request access →</a></p>
     </div>
   </div>
 
