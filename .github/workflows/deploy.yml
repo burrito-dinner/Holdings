@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: ["claude/bfd-holdings-website-bufyfg"]
-  workflow_dispatch:          # lets you trigger manually from the Actions tab
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -13,6 +13,9 @@ permissions:
 concurrency:
   group: pages
   cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   deploy:
@@ -26,11 +29,13 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true      # auto-enables Pages if not already on
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "."          # serve from repo root (index.html is here)
+          path: "."
 
       - name: Deploy to GitHub Pages
         id: deployment
