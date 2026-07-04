@@ -3,34 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BFD Holdings — Private Capital Vehicle</title>
-  <meta name="description" content="BFD Holdings is a private holding company — a personal balance sheet compounding conviction across Bitcoin and frontier crypto. No outside capital. No clients." />
+  <title>BFD Holdings — Private Investment Vehicle</title>
+  <meta name="description" content="BFD Holdings is a private investment vehicle — a personal balance sheet compounding conviction across Bitcoin and frontier crypto. No outside capital. No clients." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23050505'/><circle cx='16' cy='16' r='6' fill='none' stroke='%23c8a96a' stroke-width='1.3'/><ellipse cx='16' cy='16' rx='13' ry='4' fill='none' stroke='%23c8a96a' stroke-width='1' transform='rotate(-18 16 16)'/></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230c5138'/><text x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='700' font-size='11' fill='%23ffffff'>BFD</text></svg>" />
 </head>
 <body>
-
-  <!-- preloader -->
-  <div class="loader" id="loader" aria-hidden="true">
-    <div class="loader__word">BFD <em>Holdings</em></div>
-    <div class="loader__bar"><i></i></div>
-    <div class="loader__pct">000</div>
-  </div>
-
-  <!-- cursor + progress -->
-  <div class="cursor" aria-hidden="true"></div>
-  <div class="cursor-ring" aria-hidden="true"></div>
-  <div class="progress" aria-hidden="true"></div>
 
   <!-- ===================== NAV ===================== -->
   <nav class="nav" id="nav">
     <div class="wrap nav__inner">
       <a href="index.html" class="brand">
-        <span class="brand__mark"><svg viewBox="0 0 34 26" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="17" cy="13" r="6.5"/><ellipse cx="17" cy="13" rx="15.5" ry="5" transform="rotate(-16 17 13)"/></svg></span>
-        <span class="brand__name">BFD <em>Holdings</em></span>
+        <span class="brand__mark">B</span>
+        <span class="brand__name">BFD<span>&nbsp;Holdings</span></span>
       </a>
       <ul class="nav__links">
         <li><a href="#holdings">Holdings</a></li>
@@ -39,7 +27,7 @@
         <li><a href="#doctrine">Doctrine</a></li>
         <li><a href="#mandate">Mandate</a></li>
       </ul>
-      <span class="nav__status"><i></i> Mandate active</span>
+      <button class="btn btn--ghost nav__cta" data-unlock>Member access</button>
       <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
@@ -54,82 +42,110 @@
 
   <!-- ===================== HERO ===================== -->
   <header class="hero">
-    <canvas class="hero__canvas" id="space"></canvas>
-    <video class="hero__video" id="hero-video" muted loop playsinline preload="none" aria-hidden="true"></video>
-    <div class="hero__veil"></div>
-
-    <div class="wrap hero__inner">
-      <div class="hero__meta">
-        <span class="label">Private capital vehicle</span>
-        <span class="label label--grey">Est. on conviction — no outside capital</span>
+    <div class="wrap hero__grid">
+      <div>
+        <div class="hero__eyebrow">
+          <span class="chip"><span class="dot"></span> Private investment vehicle</span>
+          <span class="chip chip--line">No outside capital</span>
+        </div>
+        <h1 class="hero__title">Conviction,<br><em>compounded.</em></h1>
+        <p class="hero__sub">
+          BFD Holdings is a personal balance sheet run with institutional discipline.
+          <strong>Not a fund. Not a family office.</strong> Two positions — Bitcoin and
+          DNET — held through cycles, answerable to no one but conviction itself.
+        </p>
+        <div class="hero__actions">
+          <a href="#holdings" class="btn">View holdings
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#mandate" class="btn btn--ghost">The mandate</a>
+        </div>
+        <div class="hero__kpis">
+          <div class="kpi"><div class="v"><span data-count="100" data-suf="%">100%</span></div><div class="k">Self-funded</div></div>
+          <div class="kpi"><div class="v"><span data-count="2">2</span></div><div class="k">Core positions</div></div>
+          <div class="kpi"><div class="v"><span data-count="0">0</span></div><div class="k">Outside LPs</div></div>
+          <div class="kpi"><div class="v">∞</div><div class="k">Holding period</div></div>
+        </div>
       </div>
 
-      <h1 class="hero__title">
-        <span class="line"><span>Compounding</span></span>
-        <span class="line"><span>conviction across</span></span>
-        <span class="line"><span>the <em>digital frontier.</em></span></span>
-      </h1>
+      <div class="hero__panel reveal">
+        <div class="hero__panel-head">
+          <span class="hero__panel-title">Long-horizon compounding</span>
+          <span class="chip"><span class="dot"></span> Multi-cycle</span>
+        </div>
+        <canvas id="hero-chart" aria-hidden="true"></canvas>
+        <div class="hero__panel-foot">
+          <span class="note">Illustrative — not performance data</span>
+          <span class="note">BFD · Book</span>
+        </div>
 
-      <div class="hero__foot">
-        <p class="hero__desc">
-          A single operator's balance sheet, run with quiet discipline.
-          <strong>Not a fund. Not a family office.</strong> No clients, no mandate
-          but our own — a vehicle built to hold rare assets through cycles.
-        </p>
-        <div class="hero__stats">
-          <div class="hstat"><div class="k">Capital</div><div class="v">100<em>%</em></div></div>
-          <div class="hstat"><div class="k">Positions</div><div class="v">Two</div></div>
-          <div class="hstat"><div class="k">Outside LPs</div><div class="v">Zero</div></div>
+        <div class="float-card float-card--a">
+          <span class="float-card__ic">₿</span>
+          <span>
+            <span class="float-card__t">Bitcoin</span><br>
+            <span class="float-card__s">Reserve asset</span>
+          </span>
+        </div>
+        <div class="float-card float-card--b">
+          <span class="float-card__ic">◈</span>
+          <span>
+            <span class="float-card__t">DNET</span><br>
+            <span class="float-card__s">Frontier network</span>
+          </span>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- ===================== MARQUEE ===================== -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee__track">
-      <span class="marquee__item"><em>Bitcoin</em> <i>✦</i> DNET <i>✦</i> <em>Sovereignty</em> <i>✦</i> Concentration <i>✦</i> <em>Long horizon</em> <i>✦</i> Asymmetry <i>✦</i></span>
-      <span class="marquee__item"><em>Bitcoin</em> <i>✦</i> DNET <i>✦</i> <em>Sovereignty</em> <i>✦</i> Concentration <i>✦</i> <em>Long horizon</em> <i>✦</i> Asymmetry <i>✦</i></span>
+  <!-- ===================== STRIP ===================== -->
+  <div class="strip">
+    <div class="wrap strip__inner">
+      <span class="strip__item is-btc"><i></i> BTC — digital reserve</span>
+      <span class="strip__item is-dnet"><i></i> DNET — frontier network</span>
+      <span class="strip__item"><i></i> Self-custody</span>
+      <span class="strip__item"><i></i> No leverage</span>
+      <span class="strip__item"><i></i> Multi-cycle horizon</span>
     </div>
   </div>
 
   <!-- ===================== HOLDINGS ===================== -->
   <section class="section" id="holdings">
     <div class="wrap">
-      <div class="shead reveal">
-        <span class="shead__no">01</span>
+      <div class="shead shead--row reveal">
         <div>
+          <span class="label">The portfolio</span>
           <h2 class="shead__title">Two positions.<br><em>Total conviction.</em></h2>
-          <p class="shead__sub">A deliberately concentrated book. Each holding keeps a living thesis — the public summary is open; the full thesis and allocation are reserved.</p>
+          <p class="shead__sub">A deliberately concentrated book. Each holding keeps a living thesis — the public summary is open; the full thesis and allocation are reserved for members.</p>
         </div>
+        <button class="btn btn--ghost" data-unlock>Unlock dossiers</button>
       </div>
 
-      <div class="holdings__grid reveal">
-        <a href="investments/btc.html" class="holding holding--btc">
-          <div class="holding__head">
-            <span class="holding__idx">№ 01</span>
-            <span class="holding__role">Reserve</span>
+      <div class="holdings__grid">
+        <a href="investments/btc.html" class="holding reveal">
+          <div class="holding__top">
+            <span class="chip chip--btc"><span class="dot"></span> № 01 — Reserve</span>
+            <canvas class="holding__spark" data-spark="btc" aria-hidden="true"></canvas>
           </div>
           <h3 class="holding__name">Bitcoin</h3>
-          <div class="holding__tkr">BTC — Digital reserve asset</div>
+          <div class="holding__sub">BTC — Digital reserve asset</div>
           <p class="holding__teaser">Scarce, sovereign, apolitical. The foundation of the book and the benchmark every other risk is measured against.</p>
           <div class="holding__foot">
-            <span class="holding__lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5" y="11" width="14" height="9" rx="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Thesis reserved</span>
-            <span class="holding__cta">Dossier <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>
+            <span class="holding__lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="11" width="14" height="9" rx="1.5"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Thesis reserved</span>
+            <span class="holding__cta">Open dossier <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </div>
         </a>
 
-        <a href="investments/dnet.html" class="holding holding--dnet">
-          <div class="holding__head">
-            <span class="holding__idx">№ 02</span>
-            <span class="holding__role">Convexity</span>
+        <a href="investments/dnet.html" class="holding reveal" data-delay="90">
+          <div class="holding__top">
+            <span class="chip chip--dnet"><span class="dot"></span> № 02 — Convexity</span>
+            <canvas class="holding__spark" data-spark="dnet" aria-hidden="true"></canvas>
           </div>
           <h3 class="holding__name">DNET</h3>
-          <div class="holding__tkr">DNET — Frontier crypto</div>
-          <p class="holding__teaser">The asymmetric bet, sized for convexity. Higher variance, higher conviction, a thesis that updates as the network matures.</p>
+          <div class="holding__sub">DNET — Frontier crypto network</div>
+          <p class="holding__teaser">The asymmetric bet, sized for convexity. Higher variance, higher conviction — a thesis that updates as the network matures.</p>
           <div class="holding__foot">
-            <span class="holding__lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5" y="11" width="14" height="9" rx="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Thesis reserved</span>
-            <span class="holding__cta">Dossier <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>
+            <span class="holding__lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="11" width="14" height="9" rx="1.5"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Thesis reserved</span>
+            <span class="holding__cta">Open dossier <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </div>
         </a>
       </div>
@@ -137,67 +153,67 @@
   </section>
 
   <!-- ===================== DOCTRINE ===================== -->
-  <section class="section doctrine" id="doctrine">
+  <section class="section" id="doctrine" style="padding-top:0;">
     <div class="wrap">
       <div class="shead reveal">
-        <span class="shead__no">02</span>
-        <div>
-          <h2 class="shead__title">The <em>doctrine.</em></h2>
-          <p class="shead__sub">Four principles govern this balance sheet. No committee, no consensus to dilute them.</p>
-        </div>
+        <span class="label">Operating doctrine</span>
+        <h2 class="shead__title">How this balance<br>sheet is <em>run.</em></h2>
+        <p class="shead__sub">Four principles. No committee, no consensus to dilute them.</p>
       </div>
 
-      <div>
-        <div class="drow reveal">
-          <span class="drow__no">01</span>
-          <div class="drow__body">
-            <h3>Sovereignty</h3>
-            <p>Self-custodied, self-funded, self-directed. No outside capital means no outside pressure — decisions answer to conviction alone.</p>
+      <div class="doctrine__grid">
+        <div class="principle reveal">
+          <div class="principle__row">
+            <span class="principle__no">01</span>
+            <span class="principle__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg></span>
           </div>
-          <svg class="drow__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+          <h3>Sovereignty</h3>
+          <p>Self-custodied, self-funded, self-directed. No outside capital means no outside pressure — decisions answer to conviction alone.</p>
         </div>
-        <div class="drow reveal" data-delay="60">
-          <span class="drow__no">02</span>
-          <div class="drow__body">
-            <h3>Concentration</h3>
-            <p>Diversification is a hedge against ignorance. A small number of deeply understood positions, sized with intent.</p>
+        <div class="principle reveal" data-delay="70">
+          <div class="principle__row">
+            <span class="principle__no">02</span>
+            <span class="principle__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r=".8" fill="currentColor"/></svg></span>
           </div>
-          <svg class="drow__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+          <h3>Concentration</h3>
+          <p>Diversification is a hedge against ignorance. A small number of deeply understood positions, sized with intent.</p>
         </div>
-        <div class="drow reveal" data-delay="120">
-          <span class="drow__no">03</span>
-          <div class="drow__body">
-            <h3>Long horizon</h3>
-            <p>Measured in cycles, not quarters. Volatility is the toll paid for asymmetric returns, not a reason to flinch.</p>
+        <div class="principle reveal" data-delay="140">
+          <div class="principle__row">
+            <span class="principle__no">03</span>
+            <span class="principle__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2.5"/></svg></span>
           </div>
-          <svg class="drow__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+          <h3>Long horizon</h3>
+          <p>Measured in cycles, not quarters. Volatility is the toll paid for asymmetric returns, not a reason to flinch.</p>
         </div>
-        <div class="drow reveal" data-delay="180">
-          <span class="drow__no">04</span>
-          <div class="drow__body">
-            <h3>Asymmetry</h3>
-            <p>Risk what is knowable; chase what is convex. Capped downside, uncapped upside — every position must earn its place.</p>
+        <div class="principle reveal" data-delay="210">
+          <div class="principle__row">
+            <span class="principle__no">04</span>
+            <span class="principle__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 18L11 11l3.5 3.5L20 9"/><path d="M14.5 9H20v5.5"/></svg></span>
           </div>
-          <svg class="drow__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+          <h3>Asymmetry</h3>
+          <p>Risk what is knowable; chase what is convex. Capped downside, uncapped upside — every position must earn its place.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== MANDATE ===================== -->
-  <section class="section" id="mandate">
+  <!-- ===================== MANDATE (dark band) ===================== -->
+  <section class="section" id="mandate" style="padding-top:0;">
     <div class="wrap">
-      <div class="mandate">
-        <span class="label mandate__label">The mandate</span>
-        <p class="mandate__quote">Not a fund. Not a family office. A <em>personal vehicle</em> for conviction, measured in decades.</p>
-        <p class="sub reveal">
-          BFD Holdings exists to compound one person's conviction over a very long horizon.
-          It does not solicit, accept, or manage outside capital. No clients to serve, no
-          redemptions to fear — only positions to understand, and time to let them work.
-        </p>
-        <div class="mandate__actions reveal">
-          <a href="investments/btc.html" class="btn"><span>Bitcoin dossier</span></a>
-          <a href="investments/dnet.html" class="btn btn--gold"><span>DNET dossier</span></a>
+      <div class="band reveal">
+        <div class="band__inner">
+          <span class="label">The mandate</span>
+          <h2 class="band__title">No outside capital. No clients. <em>No compromise.</em></h2>
+          <p>
+            BFD Holdings exists to compound one person's conviction over a very long horizon.
+            It does not solicit, accept, or manage outside capital. No clients to serve, no
+            redemptions to fear — only positions to understand, and time to let them work.
+          </p>
+          <div class="band__actions">
+            <a href="investments/btc.html" class="btn btn--light">Bitcoin dossier</a>
+            <a href="investments/dnet.html" class="btn btn--outline-light">DNET dossier</a>
+          </div>
         </div>
       </div>
     </div>
@@ -209,10 +225,10 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="index.html" class="brand">
-            <span class="brand__mark"><svg viewBox="0 0 34 26" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="17" cy="13" r="6.5"/><ellipse cx="17" cy="13" rx="15.5" ry="5" transform="rotate(-16 17 13)"/></svg></span>
-            <span class="brand__name">BFD <em>Holdings</em></span>
+            <span class="brand__mark">B</span>
+            <span class="brand__name">BFD<span>&nbsp;Holdings</span></span>
           </a>
-          <p>A private holding company. Self-funded, self-custodied, self-directed — compounding conviction across the digital frontier.</p>
+          <p>A private investment vehicle. Self-funded, self-custodied, self-directed — compounding conviction across the digital frontier.</p>
         </div>
         <div class="footer__col">
           <h4>Holdings</h4>
@@ -235,17 +251,32 @@
         BFD Holdings is a private investment vehicle holding the personal assets of its owner.
         Nothing on this site is an offer to sell or a solicitation to buy any security or asset,
         investment advice, or a recommendation. No outside capital is accepted or managed.
-        Crypto-assets are highly volatile and may lose all value.
+        Crypto-assets are highly volatile and may lose all value. Charts are illustrative only
+        and do not depict actual performance.
       </p>
       <div class="footer__bottom">
         <p>© <span id="year">2026</span> BFD Holdings — all rights reserved</p>
         <p class="footer__lock unlock-show" data-lock>Sign out of member access</p>
       </div>
-      <div class="footer__wordmark" aria-hidden="true">BFD Holdings</div>
     </div>
   </footer>
 
-  <script src="assets/js/space.js"></script>
+  <!-- shared unlock modal -->
+  <div class="modal" id="paywall-modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__card">
+      <button class="modal__close" data-close aria-label="Close">×</button>
+      <h3 class="modal__title">Member access</h3>
+      <p class="modal__text">Enter your access code to unlock the full thesis and allocation across every dossier.</p>
+      <form id="pw-form">
+        <input class="modal__input" id="pw-input" type="text" placeholder="Access code" autocomplete="off" spellcheck="false" />
+        <div class="modal__error" id="pw-error"></div>
+        <button type="submit" class="btn" style="width:100%;">Unlock</button>
+      </form>
+      <p class="modal__hint">Don't have a code? <a href="mailto:access@bfdholdings.example">Request access →</a></p>
+    </div>
+  </div>
+
   <script src="assets/js/app.js"></script>
   <script src="assets/js/paywall.js"></script>
 </body>
