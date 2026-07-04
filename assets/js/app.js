@@ -120,8 +120,8 @@
 
       // area fill
       const grad = ctx.createLinearGradient(0, pad.t, 0, h);
-      grad.addColorStop(0, 'rgba(14,122,76,.16)');
-      grad.addColorStop(1, 'rgba(14,122,76,0)');
+      grad.addColorStop(0, 'rgba(37,99,235,.16)');
+      grad.addColorStop(1, 'rgba(37,99,235,0)');
       ctx.beginPath();
       ctx.moveTo(X(0), Y(data[0]));
       for (let i = 1; i < upto; i++) ctx.lineTo(X(i), Y(data[i]));
@@ -135,7 +135,7 @@
       ctx.beginPath();
       ctx.moveTo(X(0), Y(data[0]));
       for (let i = 1; i < upto; i++) ctx.lineTo(X(i), Y(data[i]));
-      ctx.strokeStyle = '#0e7a4c';
+      ctx.strokeStyle = '#2563eb';
       ctx.lineWidth = 2;
       ctx.lineJoin = 'round'; ctx.lineCap = 'round';
       ctx.stroke();
@@ -145,7 +145,7 @@
       ctx.beginPath(); ctx.arc(ex, ey, 6, 0, Math.PI * 2);
       ctx.fillStyle = '#ffffff'; ctx.fill();
       ctx.beginPath(); ctx.arc(ex, ey, 4, 0, Math.PI * 2);
-      ctx.fillStyle = '#0e7a4c'; ctx.fill();
+      ctx.fillStyle = '#2563eb'; ctx.fill();
     }
 
     function animate() {
@@ -173,7 +173,7 @@
     const conf = {
       btc:  { seed: 1971, vol: .14, drift: .011, color: '#b45309' },
       dnet: { seed: 4242, vol: .22, drift: .013, color: '#6d28d9' }
-    }[c.dataset.spark] || { seed: 7, vol: .1, drift: .01, color: '#0e7a4c' };
+    }[c.dataset.spark] || { seed: 7, vol: .1, drift: .01, color: '#2563eb' };
     const data = series(conf.seed, 48, conf.vol, conf.drift);
 
     function draw() {

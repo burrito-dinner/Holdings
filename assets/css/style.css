@@ -1,6 +1,6 @@
 /* =============================================================
    BFD HOLDINGS — Private Investment Vehicle
-   v5 · institutional light · paper / ink / deep green
+   v5 · institutional light · paper / ink / royal blue
    ============================================================= */
 
 :root {
@@ -13,12 +13,12 @@
   --hair:    rgba(13,16,14,.10);
   --hair-2:  rgba(13,16,14,.16);
 
-  --green:      #0c5138;   /* brand deep green */
-  --green-br:   #0e7a4c;   /* chart line */
-  --green-soft: #e4f1e9;
-  --dark:       #0b241a;   /* dark band */
-  --dark-ink:   #eaf2ec;
-  --dark-grey:  #9db8a9;
+  --brand:      #16418c;   /* brand deep blue */
+  --brand-br:   #2563eb;   /* chart line */
+  --brand-soft: #e6edfb;
+  --dark:       #0a1f3c;   /* dark band */
+  --dark-ink:   #e9eff9;
+  --dark-grey:  #93a8c7;
 
   --btc:      #b45309;
   --btc-soft: #fbf0e3;
@@ -50,7 +50,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-::selection { background: rgba(12,81,56,.16); }
+::selection { background: rgba(22,65,140,.16); }
 a { color: inherit; text-decoration: none; }
 img, svg, video, canvas { display: block; max-width: 100%; }
 button { font-family: inherit; cursor: pointer; background: none; border: none; color: inherit; }
@@ -59,7 +59,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; color: var(--ink); l
 
 .label {
   font-family: var(--mono); font-size: .66rem; font-weight: 500;
-  letter-spacing: .24em; text-transform: uppercase; color: var(--green);
+  letter-spacing: .24em; text-transform: uppercase; color: var(--brand);
 }
 .label--grey { color: var(--faint); }
 
@@ -72,7 +72,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; color: var(--ink); l
   font-family: var(--mono); font-size: .62rem; font-weight: 500;
   letter-spacing: .14em; text-transform: uppercase;
   padding: .42rem .85rem; border-radius: 100px;
-  background: var(--green-soft); color: var(--green);
+  background: var(--brand-soft); color: var(--brand);
 }
 .chip--btc  { background: var(--btc-soft);  color: var(--btc); }
 .chip--dnet { background: var(--dnet-soft); color: var(--dnet); }
@@ -87,14 +87,14 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; color: var(--ink); l
   background: var(--ink); color: #fff;
   transition: background .3s var(--ease), transform .3s var(--ease), box-shadow .3s var(--ease);
 }
-.btn:hover { background: var(--green); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(12,81,56,.25); }
+.btn:hover { background: var(--brand); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(22,65,140,.25); }
 .btn svg { width: 16px; height: 16px; }
 .btn--ghost { background: transparent; color: var(--ink); border: 1px solid var(--hair-2); }
 .btn--ghost:hover { background: var(--card); color: var(--ink); border-color: var(--ink); box-shadow: var(--shadow); }
 .btn--light { background: #fff; color: var(--dark); }
-.btn--light:hover { background: var(--green-soft); color: var(--green); box-shadow: 0 10px 24px rgba(0,0,0,.28); }
-.btn--outline-light { background: transparent; color: var(--dark-ink); border: 1px solid rgba(234,242,236,.34); }
-.btn--outline-light:hover { background: rgba(234,242,236,.1); box-shadow: none; }
+.btn--light:hover { background: var(--brand-soft); color: var(--brand); box-shadow: 0 10px 24px rgba(0,0,0,.28); }
+.btn--outline-light { background: transparent; color: var(--dark-ink); border: 1px solid rgba(233,239,249,.34); }
+.btn--outline-light:hover { background: rgba(233,239,249,.1); box-shadow: none; }
 
 /* =============================================================
    NAV
@@ -109,12 +109,12 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; color: var(--ink); l
 .brand { display: inline-flex; align-items: center; gap: .7rem; }
 .brand__mark {
   width: 34px; height: 34px; border-radius: 9px; flex-shrink: 0;
-  background: var(--green); color: #fff;
+  background: var(--brand); color: #fff;
   display: grid; place-items: center;
   font-family: var(--display); font-weight: 700; font-size: .78rem; letter-spacing: -.02em;
 }
 .brand__name { font-family: var(--display); font-weight: 600; font-size: 1.05rem; letter-spacing: -.02em; color: var(--ink); }
-.brand__name span { color: var(--green); }
+.brand__name span { color: var(--brand); }
 
 .nav__links { display: flex; align-items: center; gap: 2rem; list-style: none; }
 .nav__links a { font-size: .92rem; font-weight: 500; color: var(--grey); transition: color .25s; }
@@ -134,7 +134,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; color: var(--ink); l
 }
 .mobile-nav.open { opacity: 1; pointer-events: auto; }
 .mobile-nav a { font-family: var(--display); font-size: 1.7rem; font-weight: 600; color: var(--ink); }
-.mobile-nav a:hover { color: var(--green); }
+.mobile-nav a:hover { color: var(--brand); }
 
 /* =============================================================
    HERO
@@ -147,14 +147,14 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; color: var(--ink); l
   font-size: clamp(2.9rem, 6.5vw, 5.2rem);
   margin-bottom: 1.5rem;
 }
-.hero__title em { font-style: normal; color: var(--green); }
+.hero__title em { font-style: normal; color: var(--brand); }
 .hero__sub { font-size: clamp(1rem, 1.6vw, 1.15rem); color: var(--grey); max-width: 50ch; margin-bottom: 2.2rem; }
 .hero__sub strong { color: var(--ink); font-weight: 600; }
 .hero__actions { display: flex; gap: .9rem; flex-wrap: wrap; margin-bottom: 3rem; }
 
 .hero__kpis { display: flex; gap: 2.6rem; flex-wrap: wrap; border-top: 1px solid var(--hair); padding-top: 1.8rem; }
 .kpi .v { font-family: var(--display); font-weight: 600; font-size: 1.9rem; color: var(--ink); letter-spacing: -.03em; line-height: 1.1; }
-.kpi .v span { color: var(--green); }
+.kpi .v span { color: var(--brand); }
 .kpi .k { font-family: var(--mono); font-size: .6rem; letter-spacing: .18em; text-transform: uppercase; color: var(--faint); margin-top: .3rem; }
 
 /* hero chart card */
@@ -191,7 +191,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; color: var(--ink); l
 .strip { border-block: 1px solid var(--hair); background: var(--card); }
 .strip__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; padding-block: 1.1rem; }
 .strip__item { display: inline-flex; align-items: center; gap: .6rem; font-family: var(--mono); font-size: .62rem; letter-spacing: .16em; text-transform: uppercase; color: var(--grey); }
-.strip__item i { width: 6px; height: 6px; border-radius: 50%; background: var(--green-br); }
+.strip__item i { width: 6px; height: 6px; border-radius: 50%; background: var(--brand-br); }
 .strip__item.is-btc i { background: var(--btc); }
 .strip__item.is-dnet i { background: var(--dnet); }
 
@@ -201,7 +201,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; color: var(--ink); l
 .shead { max-width: 640px; margin-bottom: clamp(2.6rem, 5vw, 4rem); }
 .shead .label { display: inline-block; margin-bottom: 1rem; }
 .shead__title { font-size: clamp(2rem, 4.6vw, 3.4rem); margin-bottom: 1rem; }
-.shead__title em { font-style: normal; color: var(--green); }
+.shead__title em { font-style: normal; color: var(--brand); }
 .shead__sub { color: var(--grey); font-size: 1.02rem; max-width: 54ch; }
 .shead--row { max-width: none; display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
 .shead--row > div { max-width: 640px; }
@@ -228,7 +228,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; color: var(--ink); l
 .holding__lock svg { width: 12px; height: 12px; }
 .holding__cta { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--display); font-weight: 600; font-size: .92rem; color: var(--ink); }
 .holding__cta svg { width: 17px; height: 17px; transition: transform .3s var(--ease); }
-.holding:hover .holding__cta { color: var(--green); }
+.holding:hover .holding__cta { color: var(--brand); }
 .holding:hover .holding__cta svg { transform: translateX(4px); }
 
 /* =============================================================
@@ -242,7 +242,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; color: var(--ink); l
 .principle:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
 .principle__row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; }
 .principle__no { font-family: var(--mono); font-size: .64rem; letter-spacing: .2em; color: var(--faint); }
-.principle__ic { width: 40px; height: 40px; border-radius: 10px; background: var(--green-soft); color: var(--green); display: grid; place-items: center; }
+.principle__ic { width: 40px; height: 40px; border-radius: 10px; background: var(--brand-soft); color: var(--brand); display: grid; place-items: center; }
 .principle__ic svg { width: 20px; height: 20px; }
 .principle h3 { font-size: 1.35rem; margin-bottom: .5rem; }
 .principle p { color: var(--grey); font-size: .94rem; }
@@ -253,12 +253,12 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; color: var(--ink); l
 .band { background: var(--dark); color: var(--dark-ink); border-radius: 24px; overflow: hidden; position: relative; }
 .band::before {
   content: ""; position: absolute; inset: 0; pointer-events: none;
-  background: radial-gradient(60% 90% at 85% 10%, rgba(14,122,76,.28), transparent 60%);
+  background: radial-gradient(60% 90% at 85% 10%, rgba(37,99,235,.28), transparent 60%);
 }
 .band__inner { position: relative; padding: clamp(3rem, 7vw, 5.5rem); text-align: center; }
-.band .label { color: #7fd6a8; }
+.band .label { color: #7fb0ff; }
 .band__title { font-size: clamp(2rem, 5vw, 3.6rem); color: #fff; margin: 1.1rem auto 1.3rem; max-width: 18ch; letter-spacing: -.03em; }
-.band__title em { font-style: normal; color: #7fd6a8; }
+.band__title em { font-style: normal; color: #7fb0ff; }
 .band p { color: var(--dark-grey); max-width: 56ch; margin: 0 auto 2.4rem; }
 .band__actions { display: flex; gap: .9rem; justify-content: center; flex-wrap: wrap; }
 
@@ -303,11 +303,11 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; color: var(--ink); l
 .prose p { color: var(--ink-2); margin-bottom: 1.1rem; }
 .prose ul { list-style: none; display: flex; flex-direction: column; gap: .8rem; margin: 0 0 1.3rem; }
 .prose ul li { position: relative; padding-left: 1.6rem; color: var(--ink-2); }
-.prose ul li::before { content: ""; position: absolute; left: 0; top: .68em; width: 8px; height: 2px; border-radius: 2px; background: var(--green-br); }
+.prose ul li::before { content: ""; position: absolute; left: 0; top: .68em; width: 8px; height: 2px; border-radius: 2px; background: var(--brand-br); }
 .prose li b, .prose p b { color: var(--ink); font-weight: 600; }
 .prose blockquote {
   font-family: var(--display); font-weight: 500; font-size: clamp(1.25rem, 2.4vw, 1.6rem); line-height: 1.35; letter-spacing: -.02em;
-  color: var(--ink); background: var(--card); border: 1px solid var(--hair); border-left: 3px solid var(--green-br);
+  color: var(--ink); background: var(--card); border: 1px solid var(--hair); border-left: 3px solid var(--brand-br);
   border-radius: var(--r-s); padding: 1.4rem 1.6rem; margin: 1.8rem 0;
 }
 
@@ -317,7 +317,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; color: var(--ink); l
 .alloc__val { font-family: var(--display); font-weight: 600; font-size: 2.6rem; color: var(--ink); letter-spacing: -.03em; }
 .alloc__val small { font-family: var(--mono); font-size: .68rem; font-weight: 400; color: var(--grey); letter-spacing: .04em; }
 .alloc__track { height: 8px; border-radius: 100px; background: var(--paper); border: 1px solid var(--hair); overflow: hidden; }
-.alloc__fill { height: 100%; border-radius: 100px; background: var(--accent, var(--green-br)); }
+.alloc__fill { height: 100%; border-radius: 100px; background: var(--accent, var(--brand-br)); }
 
 .update-stamp { font-family: var(--mono); font-size: .62rem; letter-spacing: .08em; color: var(--faint); margin-top: 3rem; padding-top: 1.3rem; border-top: 1px solid var(--hair); }
 
@@ -331,11 +331,11 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; color: var(--ink); l
   width: min(430px, 100%); text-align: center; padding: 2.8rem 2.4rem;
   background: var(--card); border: 1px solid var(--hair); border-radius: var(--r); box-shadow: var(--shadow-lg);
 }
-.paywall__icon { width: 52px; height: 52px; border-radius: 14px; background: var(--green-soft); color: var(--green); display: grid; place-items: center; margin: 0 auto 1.3rem; }
+.paywall__icon { width: 52px; height: 52px; border-radius: 14px; background: var(--brand-soft); color: var(--brand); display: grid; place-items: center; margin: 0 auto 1.3rem; }
 .paywall__icon svg { width: 24px; height: 24px; }
 .paywall__title { font-size: 1.5rem; margin-bottom: .6rem; }
 .paywall__text { color: var(--grey); font-size: .92rem; margin-bottom: 1rem; }
-.paywall__price { font-family: var(--mono); font-size: .58rem; letter-spacing: .24em; text-transform: uppercase; color: var(--green); margin-bottom: 1.6rem; }
+.paywall__price { font-family: var(--mono); font-size: .58rem; letter-spacing: .24em; text-transform: uppercase; color: var(--brand); margin-bottom: 1.6rem; }
 .paywall__actions { display: flex; flex-direction: column; gap: .7rem; }
 
 body.unlocked .premium__inner { filter: none; opacity: 1; pointer-events: auto; user-select: auto; }
@@ -364,11 +364,11 @@ body.unlocked .unlock-show { display: inline-flex; }
   color: var(--ink); font-family: var(--mono); font-size: .88rem; letter-spacing: .24em; text-align: center; text-transform: uppercase;
   outline: none; transition: border-color .3s, box-shadow .3s;
 }
-.modal__input:focus { border-color: var(--green-br); box-shadow: 0 0 0 3px rgba(14,122,76,.14); }
+.modal__input:focus { border-color: var(--brand-br); box-shadow: 0 0 0 3px rgba(37,99,235,.14); }
 .modal__input::placeholder { color: var(--faint); }
 .modal__error { color: #b3402f; font-size: .8rem; min-height: 1.1rem; margin: .6rem 0 .3rem; text-align: center; }
 .modal__hint { color: var(--faint); font-size: .76rem; text-align: center; margin-top: 1.1rem; }
-.modal__hint a { color: var(--green); font-weight: 500; }
+.modal__hint a { color: var(--brand); font-weight: 500; }
 .modal.shake .modal__card { animation: mshake .4s; }
 @keyframes mshake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-8px)} 75%{transform:translateX(8px)} }
 
