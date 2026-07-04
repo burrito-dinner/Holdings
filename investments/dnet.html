@@ -7,21 +7,22 @@
   <meta name="description" content="BFD Holdings dossier on DNET. Public summary open; full thesis and allocation reserved for members." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0a0c'/><g fill='none' stroke='%23b9b1a0' stroke-width='1.4'><circle cx='16' cy='9' r='2.4'/><circle cx='9' cy='22' r='2.4'/><circle cx='23' cy='22' r='2.4'/><path d='M16 11l-7 9M16 11l7 9M11 22h10'/></g></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23050505'/><g fill='none' stroke='%23a9a294' stroke-width='1.4'><circle cx='16' cy='9' r='2.4'/><circle cx='9' cy='22' r='2.4'/><circle cx='23' cy='22' r='2.4'/><path d='M16 11l-7 9M16 11l7 9M11 22h10'/></g></svg>" />
 </head>
 <body>
+
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"></div>
 
   <!-- ===================== NAV ===================== -->
   <nav class="nav" id="nav">
     <div class="wrap nav__inner">
       <a href="../index.html" class="brand">
         <span class="brand__mark"><svg viewBox="0 0 34 26" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="17" cy="13" r="6.5"/><ellipse cx="17" cy="13" rx="15.5" ry="5" transform="rotate(-16 17 13)"/></svg></span>
-        <span class="brand__txt">
-          <span class="brand__name">BFD Holdings</span>
-          <span class="brand__sub">Private Capital Vehicle</span>
-        </span>
+        <span class="brand__name">BFD <em>Holdings</em></span>
       </a>
       <ul class="nav__links">
         <li><a href="../index.html#holdings">Holdings</a></li>
@@ -30,10 +31,8 @@
         <li><a href="../index.html#doctrine">Doctrine</a></li>
         <li><a href="../index.html#mandate">Mandate</a></li>
       </ul>
-      <div class="nav__right">
-        <span class="tag"><span class="dot"></span> Mandate Active</span>
-        <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
-      </div>
+      <span class="nav__status"><i></i> Mandate active</span>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
   <div class="mobile-nav" id="mobile-nav">
@@ -47,27 +46,23 @@
   <!-- ===================== ASSET HERO ===================== -->
   <header class="asset-hero asset-hero--dnet">
     <div class="wrap">
-      <div class="asset-crumb"><a href="../index.html">Holdings</a> &nbsp;/&nbsp; DNET</div>
-      <div class="asset-hero__row">
-        <span class="asset-emblem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 7l-6 8M12 7l6 8M7 17.5h10"/></svg></span>
-        <div>
-          <h1 class="asset-hero__title">DNET <span class="tkr">DNET</span></h1>
-        </div>
-      </div>
+      <div class="asset-crumb"><a href="../index.html">Holdings</a> / DNET — № 02</div>
+      <h1 class="asset-hero__title">D<em>NET</em></h1>
+      <div class="asset-hero__tkr">DNET — Frontier crypto</div>
       <p class="asset-hero__teaser">
         The convex position. DNET is the book's asymmetric crypto bet — sized smaller than
         the reserve, but carrying the upside that a concentrated, sovereign balance sheet
         exists to capture. A living thesis that updates as the network proves itself.
       </p>
       <div class="asset-tags">
-        <span class="tag">Frontier Crypto</span>
-        <span class="tag">Asymmetric Bet</span>
-        <span class="tag">High Conviction</span>
+        <span class="tag">Frontier crypto</span>
+        <span class="tag">Asymmetric bet</span>
+        <span class="tag">High conviction</span>
       </div>
 
       <div class="asset-facts">
-        <div class="fact"><div class="fact__k">Asset Class</div><div class="fact__v">Crypto</div></div>
-        <div class="fact"><div class="fact__k">Role in Book</div><div class="fact__v">Convexity</div></div>
+        <div class="fact"><div class="fact__k">Asset class</div><div class="fact__v">Crypto</div></div>
+        <div class="fact"><div class="fact__k">Role in book</div><div class="fact__v">Convexity</div></div>
         <div class="fact"><div class="fact__k">Variance</div><div class="fact__v">High</div></div>
         <div class="fact"><div class="fact__k">Conviction</div><div class="fact__v">High</div></div>
       </div>
@@ -77,10 +72,12 @@
   <!-- ===================== GATED THESIS ===================== -->
   <section class="section">
     <div class="wrap">
-      <div class="section__head reveal">
-        <span class="eyebrow">Members Dossier</span>
-        <h2 class="section__title">Full thesis &amp; allocation</h2>
-        <p class="section__sub">The complete write-up — portfolio weight, the bet, and the risks — is reserved. Unlock to read the living thesis.</p>
+      <div class="shead reveal">
+        <span class="shead__no">Dossier</span>
+        <div>
+          <h2 class="shead__title">Full thesis &amp; <em>allocation.</em></h2>
+          <p class="shead__sub">The complete write-up — portfolio weight, the bet, and the risks — is reserved. Unlock to read the living thesis.</p>
+        </div>
       </div>
 
       <div class="premium reveal">
@@ -143,28 +140,29 @@
             <p class="paywall__text">The full DNET thesis and exact allocation are reserved for members of BFD Holdings.</p>
             <div class="paywall__price">Access code required</div>
             <div class="paywall__actions">
-              <button class="btn btn--solid" data-unlock>Unlock dossier</button>
-              <a class="btn" href="mailto:access@bfdholdings.example?subject=BFD%20Holdings%20member%20access">Request access</a>
+              <button class="btn" data-unlock><span>Unlock dossier</span></button>
+              <a class="btn btn--gold" href="mailto:access@bfdholdings.example?subject=BFD%20Holdings%20member%20access"><span>Request access</span></a>
             </div>
           </div>
         </div>
       </div>
 
-      <p class="update-stamp">Living document · Thesis updated as the network and conviction evolve. Last revised by the owner.</p>
+      <p class="update-stamp">Living document — thesis updated as the network and conviction evolve. Last revised by the owner.</p>
     </div>
   </section>
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="wrap">
-      <div class="footer__bottom" style="border:0; padding-top:0;">
-        <p>© <span id="year">2026</span> BFD Holdings · Private holding — not investment advice</p>
-        <p class="footer__lock unlock-show" data-lock>Sign out of member access</p>
-      </div>
       <p class="footer__disclaimer">
         Personal holding of the owner of BFD Holdings. Not an offer, solicitation, or
         recommendation. Crypto-assets are highly volatile and may lose all value.
       </p>
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> BFD Holdings — private holding, not investment advice</p>
+        <p class="footer__lock unlock-show" data-lock>Sign out of member access</p>
+      </div>
+      <div class="footer__wordmark" aria-hidden="true">DNET</div>
     </div>
   </footer>
 
@@ -178,13 +176,13 @@
       <form id="pw-form">
         <input class="modal__input" id="pw-input" type="text" placeholder="Access code" autocomplete="off" spellcheck="false" />
         <div class="modal__error" id="pw-error"></div>
-        <button type="submit" class="btn btn--solid" style="width:100%;">Unlock</button>
+        <button type="submit" class="btn" style="width:100%;"><span>Unlock</span></button>
       </form>
       <p class="modal__hint">Don't have a code? <a href="mailto:access@bfdholdings.example">Request access →</a></p>
     </div>
   </div>
 
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/app.js"></script>
   <script src="../assets/js/paywall.js"></script>
 </body>
 </html>
