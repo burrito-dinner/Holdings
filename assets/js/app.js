@@ -1,9 +1,12 @@
 /* =============================================================
-   app.js — nav, reveals, counters, decorative charts
+   app.js — nav, reveals, counters, sparklines, word-stagger
    ============================================================= */
 (function () {
   'use strict';
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* hero line-mask reveal */
+  requestAnimationFrame(() => document.body.classList.add('loaded'));
 
   /* ---------- nav ---------- */
   const nav = document.getElementById('nav');
@@ -23,8 +26,8 @@
     mobile.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => toggle(false)));
   }
 
-  /* ---------- reveals ---------- */
-  const revealEls = document.querySelectorAll('.reveal');
+  /* ---------- reveals (also drives .rule-draw via .is-visible) ---------- */
+  const revealEls = document.querySelectorAll('.reveal, .rule-draw, .band__title');
   if ('IntersectionObserver' in window && revealEls.length) {
     const io = new IntersectionObserver((es) => {
       es.forEach((en) => {
@@ -37,6 +40,28 @@
   } else {
     revealEls.forEach((el) => el.classList.add('is-visible'));
   }
+
+  /* ---------- band title word stagger ---------- */
+  document.querySelectorAll('.band__title').forEach((q) => {
+    if (q.dataset.split) return;
+    q.dataset.split = '1';
+    const walk = (node) => {
+      [...node.childNodes].forEach((n) => {
+        if (n.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach((w) => {
+            if (/^\s*$/.test(w)) { frag.appendChild(document.createTextNode(w)); return; }
+            const s = document.createElement('span');
+            s.className = 'w'; s.textContent = w;
+            frag.appendChild(s);
+          });
+          n.replaceWith(frag);
+        } else if (n.nodeType === 1) walk(n);
+      });
+    };
+    walk(q);
+    q.querySelectorAll('.w').forEach((w, i) => { w.style.transitionDelay = (i * 50) + 'ms'; });
+  });
 
   /* ---------- count-up ---------- */
   const nums = document.querySelectorAll('[data-count]');
@@ -61,7 +86,7 @@
     nums.forEach((n) => io.observe(n));
   }
 
-  /* ---------- deterministic PRNG (stable visuals every load) ---------- */
+  /* ---------- deterministic PRNG ---------- */
   function mulberry32(seed) {
     return function () {
       seed |= 0; seed = (seed + 0x6D2B79F5) | 0;
@@ -70,19 +95,12 @@
       return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
     };
   }
-
-  /* compounding-style series: upward drift + drawdowns; purely illustrative */
   function series(seed, n, vol, drift) {
     const rnd = mulberry32(seed);
-    const out = [];
-    let v = 1;
-    for (let i = 0; i < n; i++) {
-      v *= 1 + drift + (rnd() - 0.5) * vol;
-      out.push(v);
-    }
+    const out = []; let v = 1;
+    for (let i = 0; i < n; i++) { v *= 1 + drift + (rnd() - 0.5) * vol; out.push(v); }
     return out;
   }
-
   function setupCanvas(c) {
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     const w = c.clientWidth, h = c.clientHeight;
@@ -92,110 +110,49 @@
     return { ctx, w, h };
   }
 
-  /* ---------- hero chart (single series, illustrative — no axes/values) ---------- */
-  const heroChart = document.getElementById('hero-chart');
-  if (heroChart) {
-    const data = series(20260614, 120, 0.10, 0.012);
-    let progress = reduced ? 1 : 0;
-
-    function draw() {
-      const { ctx, w, h } = setupCanvas(heroChart);
-      const pad = { l: 8, r: 14, t: 14, b: 8 };
-      const iw = w - pad.l - pad.r, ih = h - pad.t - pad.b;
-      const min = Math.min(...data), max = Math.max(...data);
-      const X = (i) => pad.l + (i / (data.length - 1)) * iw;
-      const Y = (v) => pad.t + (1 - (v - min) / (max - min)) * ih;
-
-      ctx.clearRect(0, 0, w, h);
-
-      // recessive grid — 3 hairlines
-      ctx.strokeStyle = 'rgba(13,16,14,.06)';
-      ctx.lineWidth = 1;
-      for (let g = 1; g <= 3; g++) {
-        const y = pad.t + (g / 4) * ih;
-        ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(pad.l + iw, y); ctx.stroke();
-      }
-
-      const upto = Math.max(2, Math.floor(data.length * progress));
-
-      // area fill
-      const grad = ctx.createLinearGradient(0, pad.t, 0, h);
-      grad.addColorStop(0, 'rgba(37,99,235,.16)');
-      grad.addColorStop(1, 'rgba(37,99,235,0)');
-      ctx.beginPath();
-      ctx.moveTo(X(0), Y(data[0]));
-      for (let i = 1; i < upto; i++) ctx.lineTo(X(i), Y(data[i]));
-      ctx.lineTo(X(upto - 1), h - pad.b);
-      ctx.lineTo(X(0), h - pad.b);
-      ctx.closePath();
-      ctx.fillStyle = grad;
-      ctx.fill();
-
-      // 2px line
-      ctx.beginPath();
-      ctx.moveTo(X(0), Y(data[0]));
-      for (let i = 1; i < upto; i++) ctx.lineTo(X(i), Y(data[i]));
-      ctx.strokeStyle = '#2563eb';
-      ctx.lineWidth = 2;
-      ctx.lineJoin = 'round'; ctx.lineCap = 'round';
-      ctx.stroke();
-
-      // end marker with 2px surface ring
-      const ex = X(upto - 1), ey = Y(data[upto - 1]);
-      ctx.beginPath(); ctx.arc(ex, ey, 6, 0, Math.PI * 2);
-      ctx.fillStyle = '#ffffff'; ctx.fill();
-      ctx.beginPath(); ctx.arc(ex, ey, 4, 0, Math.PI * 2);
-      ctx.fillStyle = '#2563eb'; ctx.fill();
-    }
-
-    function animate() {
-      if (progress < 1) {
-        progress = Math.min(1, progress + 0.012);
-        draw();
-        requestAnimationFrame(animate);
-      } else draw();
-    }
-
-    if ('IntersectionObserver' in window && !reduced) {
-      const io = new IntersectionObserver((es) => {
-        es.forEach((en) => { if (en.isIntersecting) { animate(); io.unobserve(en.target); } });
-      }, { threshold: .35 });
-      io.observe(heroChart);
-      draw(); // grid visible before animation starts
-    } else {
-      draw();
-    }
-    window.addEventListener('resize', draw);
-  }
-
-  /* ---------- sparklines on holding cards ---------- */
+  /* ---------- sparklines (decorative, illustrative) ---------- */
   document.querySelectorAll('[data-spark]').forEach((c) => {
     const conf = {
       btc:  { seed: 1971, vol: .14, drift: .011, color: '#b45309' },
       dnet: { seed: 4242, vol: .22, drift: .013, color: '#6d28d9' }
-    }[c.dataset.spark] || { seed: 7, vol: .1, drift: .01, color: '#2563eb' };
+    }[c.dataset.spark] || { seed: 7, vol: .1, drift: .01, color: '#1c3560' };
     const data = series(conf.seed, 48, conf.vol, conf.drift);
 
-    function draw() {
+    function draw(progress) {
       const { ctx, w, h } = setupCanvas(c);
       const min = Math.min(...data), max = Math.max(...data);
+      const upto = Math.max(2, Math.floor(data.length * progress));
       const X = (i) => 2 + (i / (data.length - 1)) * (w - 10);
       const Y = (v) => 3 + (1 - (v - min) / (max - min)) * (h - 8);
       ctx.clearRect(0, 0, w, h);
       ctx.beginPath();
       ctx.moveTo(X(0), Y(data[0]));
-      for (let i = 1; i < data.length; i++) ctx.lineTo(X(i), Y(data[i]));
+      for (let i = 1; i < upto; i++) ctx.lineTo(X(i), Y(data[i]));
       ctx.strokeStyle = conf.color;
       ctx.lineWidth = 2; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
-      ctx.globalAlpha = .85;
+      ctx.globalAlpha = .8;
       ctx.stroke();
       ctx.globalAlpha = 1;
-      const ex = X(data.length - 1), ey = Y(data[data.length - 1]);
-      ctx.beginPath(); ctx.arc(ex, ey, 4.5, 0, Math.PI * 2); ctx.fillStyle = '#fff'; ctx.fill();
+      const ex = X(upto - 1), ey = Y(data[upto - 1]);
+      ctx.beginPath(); ctx.arc(ex, ey, 4.5, 0, Math.PI * 2); ctx.fillStyle = '#f9f6ee'; ctx.fill();
       ctx.beginPath(); ctx.arc(ex, ey, 3, 0, Math.PI * 2); ctx.fillStyle = conf.color; ctx.fill();
     }
-    draw();
-    window.addEventListener('resize', draw);
+
+    /* draw-on when scrolled into view */
+    let p = reduced ? 1 : 0;
+    function animate() {
+      if (p < 1) { p = Math.min(1, p + .03); draw(p); requestAnimationFrame(animate); }
+      else draw(1);
+    }
+    if ('IntersectionObserver' in window && !reduced) {
+      const io = new IntersectionObserver((es) => {
+        es.forEach((en) => { if (en.isIntersecting) { animate(); io.unobserve(en.target); } });
+      }, { threshold: .4 });
+      io.observe(c);
+    } else {
+      draw(1);
+    }
+    window.addEventListener('resize', () => draw(p));
   });
 
   /* ---------- year ---------- */

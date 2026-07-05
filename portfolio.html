@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Ledger — BFD Holdings Portfolio</title>
+  <meta name="description" content="Every BFD Holdings position on one page: Bitcoin and DNET. Public summaries open; full theses and allocations reserved for members." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23f2ede1'/><circle cx='16' cy='16' r='12' fill='none' stroke='%231c3560' stroke-width='1.4'/><circle cx='16' cy='16' r='8.5' fill='none' stroke='%23a8862d' stroke-width='.8'/><text x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-style='italic' font-weight='600' font-size='12' fill='%231c3560'>B</text></svg>" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav" id="nav">
+    <div class="wrap nav__inner">
+      <a href="index.html" class="brand">
+        <span class="brand__seal">
+          <svg viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.1"/>
+            <circle cx="20" cy="20" r="13.5" stroke="#a8862d" stroke-width=".7"/>
+            <text x="20" y="25.5" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-weight="600" font-size="14" fill="currentColor">B</text>
+          </svg>
+        </span>
+        <span class="brand__txt">
+          <span class="brand__name">BFD Holdings</span>
+          <span class="brand__sub">Private Capital · MMXXVI</span>
+        </span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="index.html#doctrine">Doctrine</a></li>
+        <li><a href="index.html#mandate">Mandate</a></li>
+        <li><a href="#" data-unlock>Member access</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="portfolio.html">Portfolio</a>
+    <a href="index.html#doctrine">Doctrine</a>
+    <a href="index.html#mandate">Mandate</a>
+    <a href="#" data-unlock>Member access</a>
+  </div>
+
+  <!-- ===================== PAGE HERO ===================== -->
+  <header class="pf-hero">
+    <div class="wrap">
+      <span class="label label--gold">The ledger — complete</span>
+      <h1 class="pf-hero__title" style="margin-top:1.2rem;">Every position, <em>one page.</em></h1>
+      <p class="pf-hero__sub">
+        The whole book of BFD Holdings, entered like a ledger: two positions, each with a
+        living thesis. Summaries are public; the full write-ups and allocations open with
+        member access — one code unlocks everything on this page.
+      </p>
+      <div style="display:flex; gap:.9rem; flex-wrap:wrap; margin-top:2rem;">
+        <button class="btn" data-unlock>Unlock the ledger</button>
+        <a href="#btc" class="btn btn--ghost">Skip to entries ↓</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== ENTRY I — BITCOIN ===================== -->
+  <section class="entry entry--btc" id="btc">
+    <div class="wrap">
+      <div class="entry__head reveal">
+        <span class="entry__no">i.</span>
+        <h2 class="entry__name"><em>Bitcoin</em><span class="tkr">BTC</span></h2>
+        <canvas class="entry__spark" data-spark="btc" aria-hidden="true"></canvas>
+      </div>
+
+      <div class="entry__meta reveal">
+        <span class="m">Role — <b>Reserve</b></span>
+        <span class="m">Class — <b>Crypto · L1</b></span>
+        <span class="m">Custody — <b>Cold / self</b></span>
+        <span class="m">Conviction — <b>Highest</b></span>
+      </div>
+
+      <p class="entry__teaser reveal">
+        The foundation of the book. Bitcoin is held as a long-duration reserve asset — the
+        hardest, most liquid, most credibly neutral money yet engineered — and the benchmark
+        against which every other position must justify its risk.
+      </p>
+
+      <div class="premium reveal">
+        <div class="premium__inner">
+          <!-- ===========================================================
+               EDIT YOUR BITCOIN THESIS BELOW. Plain HTML — update freely.
+               =========================================================== -->
+          <div class="prose">
+            <div class="alloc" style="--accent: var(--btc);">
+              <span class="alloc__label">Portfolio allocation</span>
+              <span class="alloc__val">65<small>% of book</small></span>
+              <span class="alloc__bar"><span class="alloc__fill" style="width:65%"></span></span>
+            </div>
+
+            <blockquote>Own the scarcest monetary asset in existence, and refuse to be shaken out of it.</blockquote>
+
+            <h3>Why I hold it</h3>
+            <p>
+              Bitcoin is the anchor of this balance sheet because it is the only asset I can
+              hold with no counterparty, no issuer, and a supply schedule no one can change.
+              In a world of expanding balance sheets, a fixed twenty-one-million-coin cap is a
+              bet on arithmetic over politics.
+            </p>
+            <ul>
+              <li><b>Scarcity</b> — a hard cap enforced by code and consensus, not promises.</li>
+              <li><b>Neutrality</b> — no chief executive, no foundation, no jurisdiction to capture.</li>
+              <li><b>Liquidity</b> — deep, global, around the clock; exit is always available.</li>
+              <li><b>Sovereignty</b> — self-custodied keys; the position is mine, fully.</li>
+            </ul>
+
+            <h3>Position sizing</h3>
+            <p>
+              BTC is sized as the reserve — the largest single weight in the book — precisely
+              because it carries the lowest idiosyncratic risk of anything I own. It is the
+              benchmark; DNET must out-earn it to justify its convexity.
+            </p>
+
+            <h3>What would change my mind</h3>
+            <ul>
+              <li>A credible break in the issuance schedule or twenty-one-million cap.</li>
+              <li>Sustained, structural loss of hashrate decentralisation.</li>
+              <li>A superior, more credibly neutral settlement layer at scale.</li>
+            </ul>
+
+            <h3>Risk framing</h3>
+            <p>
+              Drawdowns of seventy percent or more are part of the contract, not a surprise.
+              The position is sized so that a brutal cycle never forces a sale. Time in the
+              asset, not timing of the asset, is the edge.
+            </p>
+          </div>
+          <!-- ===================== END EDITABLE THESIS ===================== -->
+        </div>
+
+        <div class="paywall">
+          <div class="paywall__card">
+            <div class="paywall__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5" y="11" width="14" height="9" rx="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+            <h3 class="paywall__title">Members only</h3>
+            <p class="paywall__text">The full Bitcoin thesis and exact allocation are reserved. One code unlocks every entry in the ledger.</p>
+            <div class="paywall__price">Access code required</div>
+            <div class="paywall__actions">
+              <button class="btn" data-unlock>Unlock the ledger</button>
+              <a class="btn btn--ghost" href="mailto:access@bfdholdings.example?subject=BFD%20Holdings%20member%20access">Request access</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="update-stamp reveal">A living entry — revised as conviction evolves.</p>
+    </div>
+  </section>
+
+  <!-- ===================== ENTRY II — DNET ===================== -->
+  <section class="entry entry--dnet" id="dnet">
+    <div class="wrap">
+      <div class="entry__head reveal">
+        <span class="entry__no">ii.</span>
+        <h2 class="entry__name"><em>DNET</em><span class="tkr">DNET</span></h2>
+        <canvas class="entry__spark" data-spark="dnet" aria-hidden="true"></canvas>
+      </div>
+
+      <div class="entry__meta reveal">
+        <span class="m">Role — <b>Convexity</b></span>
+        <span class="m">Class — <b>Frontier crypto</b></span>
+        <span class="m">Variance — <b>High</b></span>
+        <span class="m">Conviction — <b>High</b></span>
+      </div>
+
+      <p class="entry__teaser reveal">
+        The convex position. DNET is the book's asymmetric bet — sized smaller than the
+        reserve, but carrying the upside a concentrated, sovereign balance sheet exists to
+        capture. A living thesis that updates as the network proves itself.
+      </p>
+
+      <div class="premium reveal">
+        <div class="premium__inner">
+          <!-- ===========================================================
+               EDIT YOUR DNET THESIS BELOW. Plain HTML — update freely.
+               =========================================================== -->
+          <div class="prose">
+            <div class="alloc" style="--accent: var(--dnet);">
+              <span class="alloc__label">Portfolio allocation</span>
+              <span class="alloc__val">35<small>% of book</small></span>
+              <span class="alloc__bar"><span class="alloc__fill" style="width:35%"></span></span>
+            </div>
+
+            <blockquote>Take a sized, survivable bet on a frontier network where the upside dwarfs the position.</blockquote>
+
+            <h3>Why I hold it</h3>
+            <p>
+              DNET is the asymmetric leg of the book. Where Bitcoin is the reserve, DNET is
+              the wager — a frontier crypto position where I am paid for understanding
+              something the market has not fully priced. The job of this position is to be
+              wrong cheaply and right enormously.
+            </p>
+            <ul>
+              <li><b>Convexity</b> — small enough to lose, large enough to matter if it works.</li>
+              <li><b>Edge</b> — a thesis grounded in the network's mechanics, not the narrative.</li>
+              <li><b>Optionality</b> — exposure to an outcome Bitcoin alone cannot provide.</li>
+            </ul>
+
+            <h3>Position sizing</h3>
+            <p>
+              Deliberately sub-reserve. DNET is sized so that total loss is survivable and
+              never threatens the core, while a success re-rates the entire book. It must
+              continually out-earn Bitcoin on a risk-adjusted basis to keep its weight.
+            </p>
+
+            <h3>What I'm watching</h3>
+            <ul>
+              <li>Real usage and retention, not speculative volume.</li>
+              <li>Token-holder alignment and credible decentralisation over time.</li>
+              <li>Whether the network's moat widens or narrows each cycle.</li>
+            </ul>
+
+            <h3>Risk framing</h3>
+            <p>
+              This position can go to zero, and the book is built to absorb that. The only
+              unacceptable outcome is being forced out of a correct thesis by mis-sizing —
+              so it is sized to be held through maximum pain.
+            </p>
+          </div>
+          <!-- ===================== END EDITABLE THESIS ===================== -->
+        </div>
+
+        <div class="paywall">
+          <div class="paywall__card">
+            <div class="paywall__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5" y="11" width="14" height="9" rx="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+            <h3 class="paywall__title">Members only</h3>
+            <p class="paywall__text">The full DNET thesis and exact allocation are reserved. One code unlocks every entry in the ledger.</p>
+            <div class="paywall__price">Access code required</div>
+            <div class="paywall__actions">
+              <button class="btn" data-unlock>Unlock the ledger</button>
+              <a class="btn btn--ghost" href="mailto:access@bfdholdings.example?subject=BFD%20Holdings%20member%20access">Request access</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="update-stamp reveal">A living entry — revised as the network and conviction evolve.</p>
+    </div>
+  </section>
+
+  <!-- closing ornament -->
+  <div class="wrap" style="padding-block:3rem;">
+    <div class="orn reveal"><span>✦ ✦ ✦</span></div>
+    <p style="text-align:center; font-family:var(--serif); font-style:italic; color:var(--grey); margin-top:1.4rem;">
+      — end of ledger. Two entries, and nothing else. That is the point. —
+    </p>
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="wrap">
+      <p class="footer__disclaimer">
+        Personal holdings of the owner of BFD Holdings. Not an offer, solicitation, or
+        recommendation. Crypto-assets are highly volatile and may lose all value. Sparklines
+        are illustrative only and depict no actual performance.
+      </p>
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> BFD Holdings</p>
+        <p class="footer__lock unlock-show" data-lock>Sign out of member access</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- shared unlock modal -->
+  <div class="modal" id="paywall-modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__card">
+      <button class="modal__close" data-close aria-label="Close">×</button>
+      <h3 class="modal__title">Member access</h3>
+      <p class="modal__text">Enter your access code to unlock every thesis and allocation in the ledger.</p>
+      <form id="pw-form">
+        <input class="modal__input" id="pw-input" type="text" placeholder="Access code" autocomplete="off" spellcheck="false" />
+        <div class="modal__error" id="pw-error"></div>
+        <button type="submit" class="btn" style="width:100%;">Unlock</button>
+      </form>
+      <p class="modal__hint">No code? <a href="mailto:access@bfdholdings.example">Request access →</a></p>
+    </div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/paywall.js"></script>
+</body>
+</html>
