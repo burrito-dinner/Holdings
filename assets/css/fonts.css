@@ -1,70 +1,28 @@
 @font-face {
-  font-family: 'EB Garamond';
-  font-style: italic;
-  font-weight: 400;
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 300;
   font-display: swap;
-  src: url('../fonts/EBGaramond-400i.woff2') format('woff2');
+  src: url('../fonts/Jost-300.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'EB Garamond';
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-  src: url('../fonts/EBGaramond-500i.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'EB Garamond';
-  font-style: italic;
-  font-weight: 600;
-  font-display: swap;
-  src: url('../fonts/EBGaramond-600i.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'EB Garamond';
+  font-family: 'Jost';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('../fonts/EBGaramond-400.woff2') format('woff2');
+  src: url('../fonts/Jost-400.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'EB Garamond';
+  font-family: 'Jost';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('../fonts/EBGaramond-500.woff2') format('woff2');
+  src: url('../fonts/Jost-500.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'EB Garamond';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('../fonts/EBGaramond-600.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Inter';
+  font-family: 'Marcellus';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('../fonts/Inter-400.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('../fonts/Inter-500.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('../fonts/JetBrainsMono-400.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('../fonts/JetBrainsMono-500.woff2') format('woff2');
+  src: url('../fonts/Marcellus-400.woff2') format('woff2');
 }

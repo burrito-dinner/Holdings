@@ -3,250 +3,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BFD Holdings — A Private Capital Ledger</title>
-  <meta name="description" content="BFD Holdings is a private investment vehicle — one balance sheet, two convictions, no outside capital. Bitcoin and DNET, held through cycles." />
+  <title>BFD Holdings — Private Holding Company</title>
+  <meta name="description" content="BFD Holdings is a personal holding company. We believe mathematically scarce assets will anchor the next monetary era. We do not seek any outside capital." />
   <link rel="stylesheet" href="assets/css/fonts.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23f2ede1'/><circle cx='16' cy='16' r='12' fill='none' stroke='%231c3560' stroke-width='1.4'/><circle cx='16' cy='16' r='8.5' fill='none' stroke='%23a8862d' stroke-width='.8'/><text x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-style='italic' font-weight='600' font-size='12' fill='%231c3560'>B</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23050506'/><line x1='3' y1='16.5' x2='29' y2='16.5' stroke='%23f4f4f6' stroke-width='1'/><text x='17' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='17' fill='%23f4f4f6'>B</text></svg>" />
 </head>
 <body>
+
+  <!-- aurora light flare -->
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 
   <!-- ===================== NAV ===================== -->
   <nav class="nav" id="nav">
     <div class="wrap nav__inner">
-      <a href="index.html" class="brand">
-        <span class="brand__seal">
-          <svg viewBox="0 0 40 40" fill="none">
-            <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.1"/>
-            <circle cx="20" cy="20" r="13.5" stroke="#a8862d" stroke-width=".7"/>
-            <text x="20" y="25.5" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-weight="600" font-size="14" fill="currentColor">B</text>
-          </svg>
-        </span>
-        <span class="brand__txt">
-          <span class="brand__name">BFD Holdings</span>
-          <span class="brand__sub">Private Capital · MMXXVI</span>
-        </span>
+      <a href="index.html" class="brand" aria-label="BFD Holdings">
+        <svg viewBox="0 0 44 44" fill="none" aria-hidden="true">
+          <line x1="2" y1="21.5" x2="40" y2="21.5" stroke="currentColor" stroke-width="1.1"/>
+          <text x="25" y="30" text-anchor="middle" font-family="Georgia,serif" font-size="24" fill="currentColor">B</text>
+        </svg>
       </a>
       <ul class="nav__links">
+        <li><a href="#thesis">Thesis</a></li>
+        <li><a href="#what">What we do</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="#doctrine">Doctrine</a></li>
-        <li><a href="#mandate">Mandate</a></li>
-        <li><a href="#" data-unlock>Member access</a></li>
+        <li><a href="#" class="is-lock" data-unlock>Access</a></li>
       </ul>
       <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
   <div class="mobile-nav" id="mobile-nav">
+    <a href="#thesis">Thesis</a>
+    <a href="#what">What we do</a>
     <a href="portfolio.html">Portfolio</a>
-    <a href="#doctrine">Doctrine</a>
-    <a href="#mandate">Mandate</a>
-    <a href="#" data-unlock>Member access</a>
+    <a href="#" data-unlock>Access</a>
   </div>
 
-  <!-- ===================== HERO — letterhead ===================== -->
-  <header class="hero">
+  <!-- ===================== 01 · THESIS ===================== -->
+  <header class="stmt stmt--hero" id="thesis">
+    <span class="edge-rule" aria-hidden="true"></span>
     <div class="wrap">
-      <div class="hero__head">
-        <div class="hero__meta">
-          <span class="label label--gold">A private capital ledger</span>
-          <div class="row">
-            <span class="label label--faint">No outside capital</span>
-            <span class="label label--faint">No clients</span>
-            <span class="label label--faint">Multi-cycle</span>
-          </div>
-        </div>
-
-        <!-- rotating seal -->
-        <div class="seal" aria-hidden="true">
-          <svg class="seal__ring" viewBox="0 0 168 168">
-            <defs>
-              <path id="sealcirc" d="M84,84 m-66,0 a66,66 0 1,1 132,0 a66,66 0 1,1 -132,0"/>
-            </defs>
-            <text>
-              <textPath href="#sealcirc">BFD HOLDINGS&#160;&#160;·&#160;&#160;PRIVATE CAPITAL&#160;&#160;·&#160;&#160;CONVICTION&#160;&#160;·&#160;&#160;COMPOUNDED&#160;&#160;·&#160;&#160;</textPath>
-            </text>
-          </svg>
-          <div class="seal__core"><span>B</span></div>
-        </div>
-      </div>
-
-      <hr class="rule rule--double rule-draw" />
-
-      <h1 class="hero__title">
-        <span class="line"><span>The house of</span></span>
-        <span class="line"><span><em>two convictions.</em></span></span>
+      <span class="label">Thesis</span>
+      <h1 class="stmt__title">
+        <span class="line"><span>We believe mathematically</span></span>
+        <span class="line"><span>scarce assets will anchor</span></span>
+        <span class="line"><span>the next monetary era —</span></span>
+        <span class="line"><span>and we intend to <span class="hl">own them early.</span></span></span>
       </h1>
-
-      <hr class="rule rule-draw" data-delay="200" />
-
-      <div class="hero__foot">
-        <p class="hero__desc">
-          <span class="drop">B</span>FD Holdings is one person's balance sheet, kept like an
-          institution. <strong>Not a fund. Not a family office.</strong> It solicits nothing,
-          manages no one's money, and answers to no committee — only to the two positions
-          written into its ledger: <strong>Bitcoin</strong> and <strong>DNET</strong>.
-        </p>
-        <div class="hero__actions">
-          <a href="portfolio.html" class="btn">Read the ledger</a>
-          <a href="#doctrine" class="btn btn--ghost">The doctrine</a>
-        </div>
-      </div>
-
-      <div class="hero__ledgerline">
-        <div class="lstat"><div class="v"><span data-count="100" data-suf="%">100%</span></div><div class="k">Self-funded</div></div>
-        <div class="lstat"><div class="v"><i>Two</i></div><div class="k">Positions held</div></div>
-        <div class="lstat"><div class="v"><span data-count="0">0</span></div><div class="k">Outside investors</div></div>
-        <div class="lstat"><div class="v"><i>∞</i></div><div class="k">Intended horizon</div></div>
+    </div>
+    <div class="stmt__foot">
+      <div class="wrap">
+        <p class="footnote">A personal holding company of one investor — we do not seek, and will not accept, outside capital.</p>
+        <span class="cue">Scroll<i></i></span>
       </div>
     </div>
   </header>
 
-  <!-- ===================== TAPE ===================== -->
-  <div class="tape" aria-hidden="true">
-    <div class="tape__track">
-      <span class="tape__item"><em>Bitcoin</em> <span class="fl">✦</span> DNET <span class="fl">✦</span> <em>sovereignty</em> <span class="fl">✦</span> concentration <span class="fl">✦</span> <em>patience</em> <span class="fl">✦</span> asymmetry <span class="fl">✦</span> no outside capital <span class="fl">✦</span>&#160;</span>
-      <span class="tape__item"><em>Bitcoin</em> <span class="fl">✦</span> DNET <span class="fl">✦</span> <em>sovereignty</em> <span class="fl">✦</span> concentration <span class="fl">✦</span> <em>patience</em> <span class="fl">✦</span> asymmetry <span class="fl">✦</span> no outside capital <span class="fl">✦</span>&#160;</span>
-    </div>
-  </div>
-
-  <!-- ===================== LEDGER (portfolio) ===================== -->
-  <section class="section" id="holdings">
+  <!-- ===================== 02 · WHAT WE DO ===================== -->
+  <section class="stmt" id="what">
     <div class="wrap">
-      <div class="shead reveal">
-        <div class="shead__rule">
-          <span class="shead__no">Article I — The Portfolio</span>
-          <span class="label label--faint">Concentrated by design</span>
-        </div>
-        <h2 class="shead__title">Every position,<br>on <em>one page.</em></h2>
-        <p class="shead__sub">The entire book, kept as a ledger. Public summaries are open to all; each full thesis and allocation is reserved for members.</p>
-      </div>
-
-      <div class="ledger reveal">
-        <a href="portfolio.html#btc" class="ledger__row">
-          <span class="ledger__no">i.</span>
-          <span>
-            <span class="ledger__name">Bitcoin</span>
-            <span class="ledger__tick" style="display:block;">BTC — digital reserve</span>
-          </span>
-          <span class="ledger__role">The foundation. Scarce, sovereign, apolitical — the benchmark every other risk must beat.
-            <span class="ledger__lock" style="display:inline-flex;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="11" width="14" height="9" rx="1.5"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> thesis reserved</span>
-          </span>
-          <canvas class="ledger__spark" data-spark="btc" aria-hidden="true"></canvas>
-          <svg class="ledger__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
-        </a>
-
-        <a href="portfolio.html#dnet" class="ledger__row">
-          <span class="ledger__no">ii.</span>
-          <span>
-            <span class="ledger__name">DNET</span>
-            <span class="ledger__tick" style="display:block;">DNET — frontier network</span>
-          </span>
-          <span class="ledger__role">The wager. Sized for convexity — wrong cheaply, right enormously.
-            <span class="ledger__lock" style="display:inline-flex;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="11" width="14" height="9" rx="1.5"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> thesis reserved</span>
-          </span>
-          <canvas class="ledger__spark" data-spark="dnet" aria-hidden="true"></canvas>
-          <svg class="ledger__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
-        </a>
-
-        <div class="ledger__foot">
-          <span class="note">— and nothing else. That is the point.</span>
-          <a href="portfolio.html" class="btn btn--gold">Open the full ledger</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== DOCTRINE ===================== -->
-  <section class="section" id="doctrine" style="padding-top:1rem;">
-    <div class="wrap">
-      <div class="shead reveal">
-        <div class="shead__rule">
-          <span class="shead__no">Article II — The Doctrine</span>
-          <span class="label label--faint">Four principles, no committee</span>
-        </div>
-        <h2 class="shead__title">Rules the house<br><em>never breaks.</em></h2>
-      </div>
-
-      <div class="doctrine__grid reveal">
-        <div class="principle" data-numeral="I">
-          <div class="principle__no">Principle I.</div>
-          <h3>Sovereignty</h3>
-          <p>Self-custodied, self-funded, self-directed. No outside capital means no outside pressure — decisions answer to conviction alone.</p>
-        </div>
-        <div class="principle" data-numeral="II">
-          <div class="principle__no">Principle II.</div>
-          <h3>Concentration</h3>
-          <p>Diversification is a hedge against ignorance. A small number of deeply understood positions, sized with intent.</p>
-        </div>
-        <div class="principle" data-numeral="III">
-          <div class="principle__no">Principle III.</div>
-          <h3>Patience</h3>
-          <p>Measured in cycles, not quarters. Volatility is the toll paid for asymmetric returns, not a reason to flinch.</p>
-        </div>
-        <div class="principle" data-numeral="IV">
-          <div class="principle__no">Principle IV.</div>
-          <h3>Asymmetry</h3>
-          <p>Risk what is knowable; chase what is convex. Capped downside, uncapped upside — every position must earn its place.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== MANDATE ===================== -->
-  <section class="band" id="mandate">
-    <div class="wrap band__inner">
-      <span class="label">Article III — The Mandate</span>
-      <h2 class="band__title">No outside capital. No clients. Only <em>conviction</em>, given time enough to compound.</h2>
-      <p>
-        BFD Holdings exists to compound one person's conviction over a very long horizon.
-        It does not solicit, accept, or manage outside capital. No clients to serve, no
-        redemptions to fear — only positions to understand, and time to let them work.
+      <span class="label">What we do</span>
+      <h2 class="stmt__title">
+        <span class="line"><span>We hold few things,</span></span>
+        <span class="line"><span>and hold them <span class="hl">absolutely.</span></span></span>
+      </h2>
+      <p class="stmt__body reveal">
+        A deliberately small book of <b>liquid digital assets</b> — Bitcoin as the reserve,
+        DNET as the frontier wager — <b>self-custodied</b>, unlevered, and measured in
+        cycles rather than quarters. Nothing is managed for anyone else.
       </p>
-      <div class="band__actions">
-        <a href="portfolio.html" class="btn btn--light">Read the ledger</a>
-        <button class="btn btn--outline-light" data-unlock>Member access</button>
+    </div>
+  </section>
+
+  <!-- ===================== PRINCIPLES ===================== -->
+  <section class="principles" id="principles">
+    <div class="wrap">
+      <span class="label">Operating principles</span>
+      <div class="prow reveal">
+        <span class="prow__no">01</span>
+        <span class="prow__name">Sovereignty</span>
+        <span class="prow__text">Self-custodied, self-funded, self-directed. No outside capital means no outside pressure.</span>
       </div>
+      <div class="prow reveal" data-delay="60">
+        <span class="prow__no">02</span>
+        <span class="prow__name">Concentration</span>
+        <span class="prow__text">Diversification hedges ignorance. A small number of deeply understood positions, sized with intent.</span>
+      </div>
+      <div class="prow reveal" data-delay="120">
+        <span class="prow__no">03</span>
+        <span class="prow__name">Patience</span>
+        <span class="prow__text">Measured in cycles, not quarters. Volatility is the toll paid for asymmetric returns.</span>
+      </div>
+      <div class="prow reveal" data-delay="180">
+        <span class="prow__no">04</span>
+        <span class="prow__name">Asymmetry</span>
+        <span class="prow__text">Capped downside, uncapped upside — every position must earn its place on the sheet.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PORTFOLIO ===================== -->
+  <section class="pf" id="portfolio">
+    <div class="wrap">
+      <span class="label">Portfolio</span>
+      <div class="pf__grid">
+        <a class="plate reveal" href="portfolio.html#btc">
+          <h3 class="plate__title">Reserve<br>Asset</h3>
+          <div class="plate__note">Position № 01</div>
+          <div class="plate__assets">
+            <span class="coin">
+              <svg class="coin__ic" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#f7931a"/><text x="17" y="23.5" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="17" fill="#fff">₿</text></svg>
+              <span><span class="coin__name">Bitcoin</span><span class="coin__tkr">BTC</span></span>
+            </span>
+          </div>
+          <span class="plate__cta">Read the thesis →</span>
+        </a>
+
+        <a class="plate reveal" data-delay="100" href="portfolio.html#dnet">
+          <h3 class="plate__title">Frontier<br>Network</h3>
+          <div class="plate__note">Position № 02</div>
+          <div class="plate__assets">
+            <span class="coin">
+              <svg class="coin__ic" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#8b5cf6"/><g stroke="#fff" stroke-width="1.5" fill="#fff"><circle cx="17" cy="10.5" r="2"/><circle cx="11" cy="22" r="2"/><circle cx="23" cy="22" r="2"/><path d="M17 12.5l-5.2 7.6M17 12.5l5.2 7.6M13 22h8" fill="none"/></g></svg>
+              <span><span class="coin__name">DNET</span><span class="coin__tkr">DNET</span></span>
+            </span>
+          </div>
+          <span class="plate__cta">Read the thesis →</span>
+        </a>
+      </div>
+      <p class="pf__footnote footnote">Two positions, and nothing else. Full theses are reserved for members.</p>
     </div>
   </section>
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="wrap">
-      <div class="footer__sign reveal">
-        <div class="orn"><span>✦ ✦ ✦</span></div>
-        <div class="footer__wordmark">BFD Holdings</div>
-        <div class="footer__est">Private capital · Est. MMXXVI · Kept in one ledger</div>
-      </div>
-
-      <div class="footer__top">
-        <div class="footer__brand">
-          <span class="brand__name" style="font-size:1.3rem;">BFD Holdings</span>
-          <p>One balance sheet, kept like an institution. Self-funded, self-custodied, self-directed.</p>
-        </div>
-        <div class="footer__col">
-          <h4>The ledger</h4>
-          <ul>
-            <li><a href="portfolio.html#btc">i. Bitcoin</a></li>
-            <li><a href="portfolio.html#dnet">ii. DNET</a></li>
-            <li><a href="portfolio.html">The full portfolio</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>The house</h4>
-          <ul>
-            <li><a href="#doctrine">Doctrine</a></li>
-            <li><a href="#mandate">Mandate</a></li>
-            <li><a href="#" data-unlock>Member access</a></li>
-          </ul>
+      <div class="footer__row">
+        <a href="index.html" class="brand" aria-label="BFD Holdings">
+          <svg viewBox="0 0 44 44" fill="none" style="width:36px;height:36px;color:var(--white);" aria-hidden="true">
+            <line x1="2" y1="21.5" x2="40" y2="21.5" stroke="currentColor" stroke-width="1.1"/>
+            <text x="25" y="30" text-anchor="middle" font-family="Georgia,serif" font-size="24" fill="currentColor">B</text>
+          </svg>
+        </a>
+        <div class="footer__links">
+          <a href="#thesis">Thesis</a>
+          <a href="#what">What we do</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="#" data-unlock>Member access</a>
         </div>
       </div>
       <p class="footer__disclaimer">
-        BFD Holdings is a private investment vehicle holding the personal assets of its owner.
-        Nothing on this site is an offer to sell or a solicitation to buy any security or asset,
-        investment advice, or a recommendation. No outside capital is accepted or managed.
-        Crypto-assets are highly volatile and may lose all value. All charts are illustrative
-        only and depict no actual performance.
+        BFD Holdings is a private holding company holding the personal assets of its owner.
+        Nothing on this site is an offer, solicitation, investment advice, or a recommendation.
+        No outside capital is accepted or managed. Crypto-assets are highly volatile and may
+        lose all value.
       </p>
       <div class="footer__bottom">
         <p>© <span id="year">2026</span> BFD Holdings</p>
@@ -261,11 +172,11 @@
     <div class="modal__card">
       <button class="modal__close" data-close aria-label="Close">×</button>
       <h3 class="modal__title">Member access</h3>
-      <p class="modal__text">Enter your access code to unlock every thesis and allocation in the ledger.</p>
+      <p class="modal__text">Enter your access code to unlock every thesis and allocation.</p>
       <form id="pw-form">
         <input class="modal__input" id="pw-input" type="text" placeholder="Access code" autocomplete="off" spellcheck="false" />
         <div class="modal__error" id="pw-error"></div>
-        <button type="submit" class="btn" style="width:100%;">Unlock</button>
+        <button type="submit" class="btn btn--solid" style="width:100%;">Unlock</button>
       </form>
       <p class="modal__hint">No code? <a href="mailto:access@bfdholdings.example">Request access →</a></p>
     </div>
